@@ -1,0 +1,252 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* FOR CHROME */
+  -webkit-font-smoothing: antialiased;
+  /* FOR FIREFOX */
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* AUXILIARY CLASSES */
+p{
+color: #bcbcbc;
+font-family: "Open Sans", sans-serif;
+font-size: 18px;
+}
+
+.pl-title{
+font-family: "Proza libre", sans-serif;
+font-weight: 800;
+color: #800080;
+}
+
+/* FONTS */
+.pl-prim-font{
+font-family: "Open Sans", sans-serif;
+}
+
+/* TEXT COLORS */
+.pl-text-prim-color{
+color: #800080;
+}
+.pl-text-sec-color{
+color: #663399;
+}
+.pl-text-lightgray{
+color: #bcbcbc;
+}
+.pl-text-darkgray{
+color: #1C1C1C;
+}
+.pl-text-black{
+color: #000;
+}
+
+/* BACKGROUND COLORS */
+.pl-bg-prim-color{
+background-color: #800080;
+}
+.pl-bg-sec-color{
+background-color: #663399;
+}
+.pl-bg-lightgray{
+background-color: #bcbcbc;
+}
+.pl-bg-darkgray{
+background-color: #1C1C1C;
+}
+.pl-bg-black{
+background-color: #000;
+}
+
+
+@media screen and (min-width: 320px){
+
+  /* PAGES WRAPPER AND COVER */
+  .pl-wrapper{
+    width: 100%;
+    height: 100vh;
+    display: block;
+    border: 30px solid black;
+  }
+  .pl-wrapperfront{
+    height: 100%;
+    width: 100%;
+    display: block;
+    border: 1px solid #800080;
+  }
+
+  /* NAVBAR */
+  .pl-topbar{
+    width: 100%;
+    height: 110px;
+    background-color: transparent;
+    display: block;
+    position: fixed;
+    top:0;
+    left:0;
+  }
+
+  .pl-topmenu{
+    display: none;
+  }
+
+
+  /* LOGO'S TWO LAYERS AND ICON */
+  .pl-logo-back {
+    /* height: 100%; */
+    height: 110px;
+    /* width: 8%; */
+    width: 75px;
+    margin-left: 60px;
+    border-radius: 48px 5px 5px 5px;
+    float: left;
+  }
+
+  .pl-logo-front {
+    height: 100%;
+    width: 100%;
+    border-radius: 60px 5px 5px 5px;
+    margin-left: 0.04em;
+  }
+
+  .pl-icon {
+    height: 110%;
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+/* CONTACT BOX AND TOGGLE BUTTON */
+  .pl-btn-contact{
+    width: 45px;
+    height: 45px;
+    display: block;
+    background-image: url("../images/Contact-close-icon.svg");
+    background-repeat: no-repeat;
+    background-position-y: 0;
+    position: fixed;
+    bottom: 45px;
+    right: 45px;
+    border: none;
+    border-radius: 50%;
+    z-index: 10;
+    transition: all 0.2s ease-out;
+    cursor: pointer;
+  }
+
+  @keyframes box-pop {
+    to{
+      height: 165px;
+    }
+  }
+
+  .pl-contact-info{
+    display: none;
+    width: 215px;
+    height: 150px;
+    padding: 25px;
+    position: fixed;
+    bottom: 115px;
+    right: 65px;
+    z-index: 10;
+    border-radius: 5px;
+    animation: box-pop 0.2s forwards;
+  }
+
+  .contact-arrowdown{
+    height: 0;
+    width: 0;
+    border-top: 20px solid black;
+    border-left: 20px solid transparent;
+    display: none;
+    position: fixed;
+    bottom: 98px;
+    right: 65px;
+  }
+
+  .pl-social-links{
+    margin-top: 10px;
+  }
+
+  .pl-social-links a{
+    margin-right: 33px;
+  }
+
+  .pl-contact-info p{
+    line-height: 25px;
+  }
+
+}
+
+
+
+@media screen and (min-width: 576px){
+
+}
+
+@media screen and (min-width: 768px){
+
+}
+
+@media screen and (min-width: 992px){
+
+  .pl-topmenu {
+    display: table;
+    float: left;
+    height: 110px;
+    margin-left: 10px;
+  }
+
+  .pl-topmenu a {
+    text-decoration: none;
+    font-size: 16px;
+    text-transform: lowercase;
+    display: inline-block;
+    margin: 51px 20px 0 20px;
+    font-weight: 400;
+    position: relative;
+  }
+
+/* It nedds fix pushing foward next link */
+  /* .pl-topmenu a:hover {
+    color: #800080;
+    font-weight: bolder;
+  } */
+
+  .pl-topmenu a:before {
+    content:'';
+    width: 100%;
+    height: 4px;
+    background-color: #800080;
+    display: block;
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    transition: all 0.1s ease-out;
+    transform: scale(0, 1);
+    transform-origin: center left;
+  }
+
+  .pl-topmenu a:hover:before{
+    transform: scale(1, 1);
+  }
+
+
+}
+
+@media screen and (min-width: 1200px){
+
+}
+
+@media screen and (min-width: 1364px){
+
+}
+
+@media screen and (min-width: 1600px){
+
+}
