@@ -12,36 +12,38 @@
 
 /* --------- TEXTS --------- */
 p{
-color: #bcbcbc;
-font-family: "Open Sans", sans-serif;
-font-size: 18px;
+  color: #bcbcbc;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  margin-bottom: 0.5em;
 }
 
 .pl-title{
-font-family: "Proza libre", sans-serif;
-font-weight: 800;
-color: #800080;
+  font-size: 24px;
+  font-family: "Proza libre", sans-serif;
+  font-weight: 800;
+  color: #800080;
 }
 
 .pl-prim-font{
-font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 /* --------- TEXT COLORS --------- */
 .pl-text-prim-color{
-color: #800080;
+  color: #800080;
 }
 .pl-text-sec-color{
-color: #663399;
+  color: #663399;
 }
 .pl-text-lightgray{
-color: #bcbcbc;
+  color: #bcbcbc;
 }
 .pl-text-darkgray{
-color: #1C1C1C;
+  color: #1C1C1C;
 }
 .pl-text-black{
-color: #000;
+  color: #000;
 }
 
 /* --------- BACKGROUND COLORS --------- */
@@ -64,11 +66,13 @@ background-color: #000;
 
 @media screen and (min-width: 320px){
 
+
+
   /* --------- PAGES WRAPPER --------- */
   .pl-page-wrapper {
-    width: 100% - 30px;
+    width: calc(100% - 60px);
     height: calc(100vh - 60px);
-    display: block;
+    display: table;
     border: 1px solid #800080;
     margin: 30px;
   }
@@ -79,6 +83,12 @@ background-color: #000;
     display: block;
     border: 1px solid #800080;
   } */
+
+/* --------- WRAPPER SECTIONS 1 & 2 --------- */
+  .pl-sect {
+    height: calc(100vh - 30px);
+  }
+
 
 /* --------- PAGE PRE-LOADER --------- */
   .pl-preloader{
@@ -96,8 +106,7 @@ background-color: #000;
 
   .pl-preloader object {
     height: 15em;
-    margin-bottom: 10px;
-    /* top: 10px; */
+    margin-bottom: 20px;
     margin-top: -5em;
   }
 
@@ -204,15 +213,15 @@ background-color: #000;
   }
 
   .pl-social-links{
-    margin-top: 10px;
+    /* margin-top: 5px; */
   }
 
   .pl-social-links a{
-    margin-right: 33px;
+    margin-right: 32px;
   }
 
   .pl-contact-info p{
-    line-height: 25px;
+    line-height: 20px;
   }
 
 }
