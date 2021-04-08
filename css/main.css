@@ -8,13 +8,14 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+
 /* --------- AUXILIARY CLASSES --------- */
 
 /* --------- TEXTS --------- */
 p{
   color: #bcbcbc;
   font-family: "Open Sans", sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   margin-bottom: 0.5em;
 }
 
@@ -23,6 +24,10 @@ p{
   font-family: "Proza libre", sans-serif;
   font-weight: 800;
   color: #800080;
+}
+
+.pl-title-big {
+  font-size: 50px;
 }
 
 .pl-prim-font{
@@ -68,8 +73,8 @@ background-color: #000;
 
 
 
-  /* --------- PAGES WRAPPER --------- */
-  .pl-page-wrapper {
+  /* --------- BASE PAGE --------- */
+  .pl-base-page {
     width: calc(100% - 60px);
     height: calc(100vh - 60px);
     display: table;
@@ -84,11 +89,62 @@ background-color: #000;
     border: 1px solid #800080;
   } */
 
-/* --------- WRAPPER SECTIONS 1 & 2 --------- */
   .pl-sect {
     height: calc(100vh - 30px);
   }
 
+  #pl-sect1-bg {
+    height: 100%;
+    width: 90%;
+    position: absolute;
+    background-size: 30%;
+    background-image: url("../images/plumbus03b.png");
+    background-repeat: no-repeat;
+    background-position: 20% 90%;
+    opacity: 0.7;
+    z-index: 5;
+    transform: rotateY(180deg);
+  }
+
+  .intro {
+    margin-top: 20%;
+  }
+
+  .pl-arrowdown-container {
+    position: absolute;
+  }
+
+  .pl-arrowdown-box {
+    opacity: 1;
+    position: fixed;
+    height: 80px;
+    width: 50px;
+    border-radius: 50px 50px 0 0;
+    transition: all 0.2s;
+    bottom: 0;
+    right: 50%;
+
+  }
+
+  .pl-arrow-shaft {
+    width: 4px;
+    height: 35px;
+    position: relative;
+    bottom: -30%;
+    margin: auto;
+    background-color: black;
+  }
+
+  .pl-arrow-point {
+    height: 0;
+    width: 0;
+    border-top: 10px solid black;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    margin: auto;
+    position: relative;
+    bottom: -30%;
+  }
 
 /* --------- PAGE PRE-LOADER --------- */
   .pl-preloader{
@@ -120,20 +176,24 @@ background-color: #000;
     animation: fade-out 1s forwards 1s ease-in;
   }
 
+
   /* --------- NAVBAR --------- */
   .pl-topbar{
-    width: 100%;
+    width: 100vw;
     height: 110px;
     background-color: transparent;
     display: block;
     position: fixed;
     top:0;
     left:0;
+    z-index: 10;
   }
 
   .pl-topmenu{
     display: none;
+    z-index: 10;
   }
+
 
   /* -------- LOGO'S TWO LAYERS AND ICON -------- */
   .pl-logo-back {
@@ -201,7 +261,7 @@ background-color: #000;
     animation: box-pop 0.2s forwards;
   }
 
-  .contact-arrowdown{
+  .contact-arrowcorner{
     height: 0;
     width: 0;
     border-top: 20px solid black;
@@ -210,10 +270,6 @@ background-color: #000;
     position: fixed;
     bottom: 98px;
     right: 65px;
-  }
-
-  .pl-social-links{
-    /* margin-top: 5px; */
   }
 
   .pl-social-links a{
@@ -248,7 +304,7 @@ background-color: #000;
   .pl-topmenu a {
     text-decoration: none;
     font-size: 16px;
-    text-transform: lowercase;
+    text-transform: uppercase;
     display: inline-block;
     margin: 51px 20px 0 20px;
     font-weight: 400;
