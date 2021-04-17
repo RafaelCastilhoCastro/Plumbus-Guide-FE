@@ -8,145 +8,14 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-
-/* --------- AUXILIARY CLASSES --------- */
-
-/* --------- TEXTS --------- */
-p{
-  color: #bcbcbc;
-  font-family: "Open Sans", sans-serif;
-  font-size: 16px;
-  margin-bottom: 0.5em;
-}
-
-.pl-title{
-  font-size: 24px;
-  font-family: "Proza libre", sans-serif;
-  font-weight: 800;
-  color: #800080;
-}
-
-.pl-title-big {
-  font-size: 50px;
-}
-
-.pl-prim-font{
-  font-family: "Open Sans", sans-serif;
-}
-
-/* --------- TEXT COLORS --------- */
-.pl-text-prim-color{
-  color: #800080;
-}
-.pl-text-sec-color{
-  color: #663399;
-}
-.pl-text-lightgray{
-  color: #bcbcbc;
-}
-.pl-text-darkgray{
-  color: #1C1C1C;
-}
-.pl-text-black{
-  color: #000;
-}
-
-/* --------- BACKGROUND COLORS --------- */
-.pl-bg-prim-color{
-background-color: #800080;
-}
-.pl-bg-sec-color{
-background-color: #663399;
-}
-.pl-bg-lightgray{
-background-color: #bcbcbc;
-}
-.pl-bg-darkgray{
-background-color: #1C1C1C;
-}
-.pl-bg-black{
-background-color: #000;
+html {
+  scroll-behavior: smooth;
 }
 
 
 @media screen and (min-width: 320px){
 
-
-
-  /* --------- BASE PAGE --------- */
-  .pl-base-page {
-    width: calc(100% - 60px);
-    height: calc(100vh - 60px);
-    display: table;
-    border: 1px solid #800080;
-    margin: 30px;
-  }
-  /* DEPRECATED */
-  /* .pl-wrapperfront{
-    height: 100%;
-    width: 100%;
-    display: block;
-    border: 1px solid #800080;
-  } */
-
-  .pl-sect {
-    height: calc(100vh - 30px);
-  }
-
-  #pl-sect1-bg {
-    height: 100%;
-    width: 90%;
-    position: absolute;
-    background-size: 30%;
-    background-image: url("../images/plumbus03b.png");
-    background-repeat: no-repeat;
-    background-position: 20% 90%;
-    opacity: 0.7;
-    z-index: 5;
-    transform: rotateY(180deg);
-  }
-
-  .intro {
-    margin-top: 20%;
-  }
-
-  .pl-arrowdown-container {
-    position: absolute;
-  }
-
-  .pl-arrowdown-box {
-    opacity: 1;
-    position: fixed;
-    height: 80px;
-    width: 50px;
-    border-radius: 50px 50px 0 0;
-    transition: all 0.2s;
-    bottom: 0;
-    right: 50%;
-
-  }
-
-  .pl-arrow-shaft {
-    width: 4px;
-    height: 35px;
-    position: relative;
-    bottom: -30%;
-    margin: auto;
-    background-color: black;
-  }
-
-  .pl-arrow-point {
-    height: 0;
-    width: 0;
-    border-top: 10px solid black;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    margin: auto;
-    position: relative;
-    bottom: -30%;
-  }
-
-/* --------- PAGE PRE-LOADER --------- */
+    /* --------- PAGE PRE-LOADER --------- */
   .pl-preloader{
     width: 100%;
     height: 110vh;
@@ -166,15 +35,6 @@ background-color: #000;
     margin-top: -5em;
   }
 
-  @keyframes fade-out {
-    to {
-      opacity: 0;
-    }
-  }
-
-  .pl-preload-fade {
-    animation: fade-out 1s forwards 1s ease-in;
-  }
 
 
   /* --------- NAVBAR --------- */
@@ -204,7 +64,7 @@ background-color: #000;
     margin-left: 60px;
     border-radius: 48px 5px 5px 5px;
     float: left;
-    z-index: 10;
+    z-index: 11;
   }
 
   .pl-logo-front {
@@ -212,7 +72,7 @@ background-color: #000;
     width: 100%;
     border-radius: 60px 5px 5px 5px;
     margin-left: 0.04em;
-    z-index: 10;
+    z-index: 12;
   }
 
   .pl-icon {
@@ -224,14 +84,187 @@ background-color: #000;
   }
 
 
+  /* --------- BASE PAGE --------- */
+
+  .pl-base-page {
+    width: calc(100% - 60px);
+    height: calc(100vh - 60px);
+    display: table;
+    border: 1px solid #800080;
+    margin: 30px;
+  }
+  /* DEPRECATED */
+  /* .pl-wrapperfront{
+    height: 100%;
+    width: 100%;
+    display: block;
+    border: 1px solid #800080;
+  } */
+
+  .pl-sect {
+    height: calc(100vh - 30px);
+  }
+
+  .pl-sect1-bg {
+    height: 100%;
+    width: 90%;
+    position: absolute;
+    background-size: 30%;
+    background-image: url("../images/plumbus03b.png");
+    background-repeat: no-repeat;
+    background-position: 20% 90%;
+    opacity: 0.7;
+    z-index: 0;
+    transform: rotateY(180deg);
+  }
+
+  .intro-text {
+    margin-top: 20%;
+  }
+
+  .pl-btn-getnow {
+    visibility: visible;
+    position: fixed;
+    margin: 1px;
+  }
+
+
+  /* ---------  OVERLAY  --------- */
+  .pl-overlay{
+    width: 110%;
+    height: 110vh;
+    background-color: rgba(128, 0, 128, 0.8);
+    position: fixed;
+    top: -1em;
+    left: -0.5em;
+    z-index: 150;
+    display: none;
+  }
+
+
+
+  /* ---------  CONTACT MODAL  --------- */
+  .pl-contact-modal{
+    width: 800px;
+    display: table;
+    position: fixed;
+    top: -100%;
+    left: 0;
+    right: 0;
+    z-index: 160;
+    margin: auto;
+    border-radius: 30px 0 30px 30px;
+    padding: 30px;
+    display: display;
+  }
+
+  @keyframes slideFromTop {
+    to{
+      top: 30%;
+    }
+  }
+
+  .pl-Anim-Slide-Top{
+    animation: slideFromTop 0.5s forwards cubic-bezier(.24,1.69,.75,.76);
+  }
+
+  .pl-modal-header p{
+    margin-bottom: 35px;
+  }
+
+  .pl-modal-close-btn {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    background-color: #121212;
+    font-size: 30px;
+    border: none;
+  }
+
+  .pl-modal-btn-X {
+    position: absolute;
+    top: -4px;
+    right: 15.5px;
+  }
+
+  .pl-form-field, .pl-form-textarea{
+    width: 100%;
+    background-color: #121212;
+    color: #bcbcbc;
+    border: none;
+    padding-left: 10px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+  }
+
+  .pl-form-field{
+    height: 45px;
+  }
+
+
+  /* ----- ARROW DOWN SMOOTH SCROLL ----- */
+  .pl-arrowdown-box {
+    display: block;
+    opacity: 1;
+    position: fixed;
+    height: 80px;
+    width: 50px;
+    border-radius: 50px 50px 0 0;
+    transition: opacity 0.5s;
+    bottom: 0;
+    right: 50%;
+    z-index: 15;
+  }
+
+  .pl-arrow-shaft {
+    width: 4px;
+    height: 35px;
+    position: relative;
+    bottom: -30%;
+    margin: auto;
+    background-color: black;
+  }
+
+  .pl-arrow-point {
+    height: 0;
+    width: 0;
+    border-top: 10px solid black;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    margin: auto;
+    position: relative;
+    bottom: -30%;
+  }
+
+
+  /* ----- ARROW UP SMOOTH SCROLL ----- */
+
+  /* DIV TO MARK THE PAGE'S VERY TOP */
+  .pl-top-marker {
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top: 0;
+  }
+
+  .pl-arrowup-box {
+    opacity: 1;
+    transform: scaleY(-1);
+    top: 0;
+  }
+
+
 /* --------- CONTACT BOX AND TOGGLE BUTTON --------- */
+
   .pl-btn-contact{
     width: 45px;
     height: 45px;
     display: block;
     background-image: url("../images/Contact-close-icon.svg");
     background-repeat: no-repeat;
-    background-position-y: 0;
     position: fixed;
     bottom: 45px;
     right: 45px;
@@ -242,13 +275,17 @@ background-color: #000;
     cursor: pointer;
   }
 
-  @keyframes box-pop {
+  .pl-btn-contact-Y{
+    background-position-y: -45px;
+  }
+
+  @keyframes box-grow {
     to{
       height: 165px;
     }
   }
 
-  .pl-contact-info{
+  .pl-info-box{
     display: none;
     width: 215px;
     height: 150px;
@@ -258,10 +295,10 @@ background-color: #000;
     right: 65px;
     z-index: 10;
     border-radius: 5px;
-    animation: box-pop 0.2s forwards;
+    animation: box-grow 0.2s forwards;
   }
 
-  .contact-arrowcorner{
+  .pl-contact-arrowcorner{
     height: 0;
     width: 0;
     border-top: 20px solid black;
@@ -276,7 +313,7 @@ background-color: #000;
     margin-right: 32px;
   }
 
-  .pl-contact-info p{
+  .pl-info-box p{
     line-height: 20px;
   }
 
@@ -311,7 +348,7 @@ background-color: #000;
     position: relative;
   }
 
-/* It nedds fix pushing foward next link */
+/* It needs fix pushing foward next link */
   /* .pl-topmenu a:hover {
     color: #800080;
     font-weight: bolder;
@@ -348,4 +385,130 @@ background-color: #000;
 
 @media screen and (min-width: 1600px){
 
+}
+
+
+/* --------- AUXILIARY CLASSES --------- */
+
+.pl-toggleDisplayBlock{
+  display: block;
+}
+
+@keyframes fade-out {
+  to {
+    opacity: 0;
+  }
+}
+
+.pl-fadeout {
+  animation: fade-out 1s forwards 1s ease-in;
+}
+
+
+/* --------- TEXTS --------- */
+p, label{
+  color: #bcbcbc;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  margin-bottom: 0.5em;
+}
+
+.pl-title{
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.pl-title-big {
+  font-size: 50px;
+  font-weight: 800;
+}
+
+.pl-prim-font{
+  font-family: "Open Sans", sans-serif;
+}
+
+.pl-sec-font{
+  font-family: "Proza libre", sans-serif;
+}
+
+/* --------- TEXT COLORS --------- */
+.pl-text-prim-color{
+  color: #800080;
+}
+.pl-text-sec-color{
+  color: #663399;
+}
+.pl-text-lightgray{
+  color: #bcbcbc;
+}
+.pl-text-mdgray{
+  color: #1C1C1C;
+}
+.pl-text-black{
+  color: #000;
+}
+
+/* --------- BACKGROUND COLORS --------- */
+.pl-bg-prim-color{
+background-color: #800080;
+}
+.pl-bg-sec-color{
+background-color: #663399;
+}
+.pl-bg-lightgray{
+background-color: #bcbcbc;
+}
+.pl-bg-mdgray{
+background-color: #1C1C1C;
+}
+.pl-bg-darkgray{
+background-color: #121212;
+}
+.pl-bg-black{
+background-color: #000;
+}
+
+
+/* --------- BUTTONS --------- */
+.pl-btn {
+  position: relative;
+  display: table;
+  text-decoration: none;
+  border: none;
+  font-weight: 600;
+  transition: all 0.2s ease-out;
+  box-shadow: 4px 5px 8px #800080;
+}
+
+.pl-btn-md {
+  height: 38px;
+  padding: 0 27px;
+  border-radius: 19px;
+  font-size: 14px;
+}
+
+.pl-btn-lg {
+  height: 45px;
+  padding: 0 35px;
+  border-radius: 25px;
+  font-size: 18px;
+}
+
+.pl-btn-lg:hover, .pl-btn-md:hover{
+  background-color: #800080;
+  color: #fff;
+  box-shadow: 5px 6px 8px #663399;
+}
+
+.pl-btn-center{
+  margin: 0 auto;
+}
+
+.pl-btn-r{
+  float: right;
+}
+
+.pl-btn-block{
+  display: block;
+  width: 50%;
 }

@@ -4,11 +4,11 @@ var phrases = [
   "Repurposing the schleem.",
   "Pushing the dinglebop through the grumbo.",
   "Rubbing the fleeb thoroughly.",
-  "A Schlami is rubbing it.",
-  "The fleeb is been cut.",
+  "A Schlami is now rubbing it.",
+  "Cutting the fleeb.",
   "Taking care of the several hizzards.",
-  "Blamfs rubbing against the chumbles.",
-  "The ploobis and grumbo are been shaved away.",
+  "Rubbing the blamfs against the chumbles.",
+  "Shaving away the ploobis and grumbo.",
 ];
 
 // APPLY RANDOM PHRASE AND FADE-OUT TO PRELOAD PAGE
@@ -17,7 +17,7 @@ window.addEventListener('load', function(){
   var chosenPhrase = phrases[Math.floor(Math.random() * phrases.length)];
   phrase.innerHTML = chosenPhrase;
   preload = document.querySelector('.pl-preloader');
-  preload.classList.toggle('pl-preload-fade');
+  preload.classList.toggle('pl-fadeout');
 
   setTimeout(function(){
     preload.style.display = 'none';
@@ -25,32 +25,36 @@ window.addEventListener('load', function(){
 });
 
 
+// DISPLAY TOGGLE ON OVERLAY AND CONTACT MODAL
+var toggleModal = document.querySelectorAll('.pl-toggle-modal');
+
+for (var i = 0; i < toggleModal.length; i++) {
+  toggleModal[i].addEventListener("click", function(){
+    var overlay = document.querySelector('.pl-overlay');
+    var contactModal = document.querySelector('.pl-contact-modal');
+    overlay.classList.toggle('pl-toggleDisplayBlock');
+    contactModal.classList.toggle('pl-Anim-Slide-Top');
+  }
+)};
+
 
 // APPLY SLIDE EFFECT ON CONTACT BTN & INFO BOX
-btn1 = document.getElementById("btnContact");
-box1 = document.getElementById("contactInfo");
-arrow = document.getElementById("arrowCorner");
+var btn1 = document.querySelector(".pl-btn-contact");
+var box1 = document.querySelector(".pl-info-box");
+var arrow = document.querySelector(".pl-contact-arrowcorner");
 
 btn1.addEventListener("click", function(){
-  if (btn1.style.backgroundPositionY == 0) {
-    btn1.style.backgroundPositionY = "-45px";
-    box1.style.display = "block";
-    arrow.style.display = "block";
-  }else {
-    btn1.style.backgroundPositionY = '';
-    box1.style.display = 'none';
-    arrow.style.display = 'none';
-  }
+    btn1.classList.toggle('pl-btn-contact-Y')
+    box1.classList.toggle('pl-toggleDisplayBlock');
+    arrow.classList.toggle('pl-toggleDisplayBlock');
 });
 
-// APPLY FADE EFFECT OF ARROW DOWN ON PAGE SCROLL
-window.addEventListener('scroll', function(){
-  if (window.pageYOffset > 50 && window.pageYOffset < 100) {
-    arrowbox = document.querySelector('.pl-arrowdown-box');
-    arrowbox.style.opacity = 0;
-  }
-  if (window.pageYOffset < 5) {
-    arrowbox = document.querySelector('.pl-arrowdown-box');
-    arrowbox.style.opacity = 1;
+
+// APPLY FADE EFFECT OF ARROWS UP & DOWN ON PAGE SCROLL
+
+var waypoint = new Waypoint({
+  element: document.querySelector('.pl-arrowdown-box'),
+  handler: function() {
+    console.log('test');
   }
 })

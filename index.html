@@ -11,12 +11,15 @@
   </head>
 
   <body class="pl-bg-black">
+
+    <div id="pl-top-marker" class="pl-top-marker">
+    </div>
+
     <!-- PRE-LOADER PAGE -->
-    <div class="pl-preloader pl-bg-darkgray">
+    <div class="pl-preloader pl-bg-mdgray">
         <object type="image/svg+xml" data="images/Plumbus-icon-purple.svg"></object>
         <p class="pl-text-lightgray pl-title pl-preload-phrase"></p>
     </div>
-
 
     <!-- TOP NAVBAR -->
     <header class="pl-topbar">
@@ -33,41 +36,110 @@
     </header>
 
     <!-- BASE PAGE -->
-    <div class="pl-base-page pl-bg-darkgray">
-      <section class="pl-sect">
-        <div id="pl-sect1-bg" class="pl-sect1-bg">
+    <div class="pl-base-page pl-bg-mdgray">
+      <section id="section1" class="pl-sect">
+        <div class="pl-sect1-bg">
         </div>
-        <div class="container">
+
+        <!-- INTRO TEXT -->
+        <div class="container"> <!-- BOOTSTRAP CONTAINER -->
           <div class="row">
-            <div class="col-sm-12 col-md-3 offset-md-2 intro">
-              <h1 class="pl-title pl-title-big">Plumbus</h1>
-              <p><span class="pl-title">W</span>elcome to the exciting world of Plumbus ownership!
+            <div class="col-sm-12 col-md-3 offset-md-2 intro-text">
+              <h1 class="pl-title-big pl-sec-font pl-text-prim-color">PLUMBUS</h1>
+              <p><span class="pl-title pl-text-sec-color">W</span>elcome to the exciting world of Plumbus ownership!
                 <br>
                 <br>A Plumbus will aid many things in life, making life easier.
                  With proper maintenance, handling, storage, and urging, Plumbus
                  will provide you with a lifetime of better living and happiness.
               </p>
+              <br>
+              <button class="pl-btn pl-btn-lg pl-btn-center pl-bg-sec-color pl-text-black pl-prim-font pl-toggle-modal">Get now !</button>
             </div>
           </div>
         </div>
+
+
+        <!-- OVERLAY -->
+        <div class="pl-overlay pl-toggle-modal"></div>
+
+        <!-- CONTACT MODAL -->
+        <div class="pl-contact-modal pl-bg-black">
+
+          <!-- MODAL HEADER -->
+          <div class="container">
+            <div class="pl-modal-header">
+              <h1 class="pl-title-big pl-sec-font pl-text-prim-color">Submit your order</h1>
+              <p>Provide us your contact information.</p>
+              <button class="pl-text-lightgray pl-modal-close-btn pl-toggle-modal" type="button" name="button">
+                <span class="pl-modal-btn-X">x</span></button>
+            </div>
+          </div>
+
+          <!-- MODAL BODY -->
+          <div class="container pl-modal-body">
+            <div class="row">
+              <div class="col-sm-12">
+                <form id="contact-form" action="#" method="post">
+                  <div class="row">
+                    <!-- NAME & PHONE -->
+                    <div class="col-sm-12 col-md-6">
+                      <label for="pl-mod-name">Name</label>
+                      <input class="pl-form-field" type="text" id="pl-mod-name" name="name" value="">
+                      <label for="pl-mod-phone">Phone</label>
+                      <input class="pl-form-field" type="tel" id="pl-mod-phone" name="phone" pattern="[0-9]{2}-[0-9]{5}-[0-9]{4}">
+                    </div>
+                    <!-- EMAIL & ADDRESS -->
+                    <div class="col-sm-12 col-md-6">
+                      <label for="pl-mod-email">Email</label>
+                      <input class="pl-form-field" type="email" id="pl-mod-email" name="email" value="">
+                      <label for="pl-mod-site">Address</label>
+                      <input class="pl-form-field" type="url" id="pl-mod-site" name="website" value="">
+                    </div>
+                  </div>
+                  <!-- COMMENTS -->
+                  <div class="col-sm-12">
+                    <label for="pl-mod-commts">Comments</label>
+                    <textarea class="pl-form-textarea" id="pl-mod-commts" name="comments" rows="5"></textarea>
+                  </div>
+                </form>
+                <div class="row justify-content-end">
+                  <div class="col-sm-6">
+                    <button class="pl-btn pl-btn-lg pl-bg-sec-color pl-btn-r pl-btn-block" type="submit" form="contact-form" value="Submit">Submit</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+
+        <!-- ARROW DOWN SMOOTH SCROLL -->
         <div class="pl-arrowdown-container">
-          <div class="pl-arrowdown-box pl-bg-prim-color">
+          <a href="#section2" class="pl-arrowdown-box pl-bg-prim-color">
             <div class="pl-arrow-shaft"></div>
             <div class="pl-arrow-point"></div>
-          </div>
+          </a>
         </div>
       </section>
 
-      <section class="pl-sect">
+      <section id="section2" class="pl-sect">
+        <!-- ARROW UP SMOOTH SCROLL -->
+        <div class="pl-arrowup-container">
+          <a href="#pl-top-marker" class="pl-arrowdown-box pl-arrowup-box pl-bg-prim-color">
+            <div class="pl-arrow-shaft"></div>
+            <div class="pl-arrow-point"></div>
+          </a>
+        </div>
       </section>
     </div>
 
     <!-- CONTACT BTN & BOX -->
-    <button id="btnContact" class="pl-btn-contact pl-bg-prim-color">
+    <button class="pl-btn-contact pl-bg-prim-color">
     </button>
 
-    <div id="contactInfo" class="pl-contact-info pl-bg-black">
-      <h2 class="pl-title">Contact Info</h2>
+    <div class="pl-info-box pl-bg-black">
+      <h2 class="pl-title pl-text-prim-color">Retailer Info</h2>
       <p>email@email.com</p>
       <p>+55 11 9 8888-7777</p>
       <div class="pl-social-links">
@@ -77,10 +149,11 @@
       </div>
     </div>
 
-    <div id="arrowCorner" class="contact-arrowcorner">
+    <div class="pl-contact-arrowcorner">
     </div>
 
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js" integrity="sha512-fHXRw0CXruAoINU11+hgqYvY/PcsOWzmj0QmcSOtjlJcqITbPyypc8cYpidjPurWpCnlB8VKfRwx6PIpASCUkQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/shortcuts/inview.min.js" integrity="sha512-g6IhMPPqSSUgE+lYgBpdsXICK0fNhDlDDEuIbphNIKfPTYFD/1VcnxA+7pS9mibvzIb5SB0nNvii5M+yMwkcJA==" crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/main.js"></script>
   </body>
 </html>
