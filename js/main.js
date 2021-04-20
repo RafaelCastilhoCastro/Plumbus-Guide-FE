@@ -17,11 +17,7 @@ window.addEventListener('load', function(){
   var chosenPhrase = phrases[Math.floor(Math.random() * phrases.length)];
   phrase.innerHTML = chosenPhrase;
   preload = document.querySelector('.pl-preloader');
-  preload.classList.toggle('pl-fadeout');
-
-  setTimeout(function(){
-    preload.style.display = 'none';
-  }, 2000);
+  preload.classList.toggle('pl-fadeout-delay');
 });
 
 
@@ -39,22 +35,32 @@ for (var i = 0; i < toggleModal.length; i++) {
 
 
 // APPLY SLIDE EFFECT ON CONTACT BTN & INFO BOX
-var btn1 = document.querySelector(".pl-btn-contact");
-var box1 = document.querySelector(".pl-info-box");
+var btnContact = document.querySelector(".pl-btn-contact");
+var infoBox = document.querySelector(".pl-info-box");
 var arrow = document.querySelector(".pl-contact-arrowcorner");
 
-btn1.addEventListener("click", function(){
-    btn1.classList.toggle('pl-btn-contact-Y')
-    box1.classList.toggle('pl-toggleDisplayBlock');
+btnContact.addEventListener("click", function(){
+    btnContact.classList.toggle('pl-btn-contact-Y')
+    infoBox.classList.toggle('pl-toggleDisplayBlock');
     arrow.classList.toggle('pl-toggleDisplayBlock');
 });
 
 
 // APPLY FADE EFFECT OF ARROWS UP & DOWN ON PAGE SCROLL
+// USING WAYPOINTS
 
 var waypoint = new Waypoint({
   element: document.querySelector('.pl-arrowdown-box'),
   handler: function() {
-    console.log('test');
-  }
-})
+    this.element.classList.toggle('pl-fadeout');
+  },
+  offset: '80%'
+});
+
+var waypoint = new Waypoint({
+  element: document.querySelector('.pl-arrowup-box'),
+  handler: function() {
+    this.element.classList.toggle('pl-appear');
+  },
+  offset: -20
+});

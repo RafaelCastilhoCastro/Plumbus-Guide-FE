@@ -155,12 +155,13 @@ html {
     margin: auto;
     border-radius: 30px 0 30px 30px;
     padding: 30px;
-    display: display;
+    visibility: hidden;
   }
 
   @keyframes slideFromTop {
-    to{
+    to {
       top: 30%;
+      visibility: visible;
     }
   }
 
@@ -208,6 +209,7 @@ html {
   /* ----- ARROW DOWN SMOOTH SCROLL ----- */
   .pl-arrowdown-box {
     display: block;
+    visibility: visible;
     opacity: 1;
     position: fixed;
     height: 80px;
@@ -251,9 +253,11 @@ html {
   }
 
   .pl-arrowup-box {
-    opacity: 1;
+    opacity: 0;
+    visibility: hidden;
     transform: scaleY(-1);
     top: 0;
+    transition: all 1s ease-in;
   }
 
 
@@ -394,14 +398,35 @@ html {
   display: block;
 }
 
+.pl-toggleDisplayNone{
+  display: none;
+}
+
+
 @keyframes fade-out {
   to {
     opacity: 0;
+    visibility: hidden;
   }
 }
 
-.pl-fadeout {
+.pl-fadeout-delay {
   animation: fade-out 1s forwards 1s ease-in;
+}
+
+.pl-fadeout {
+  animation: fade-out 0.5s forwards ease-in;
+}
+
+@keyframes appear {
+  to{
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.pl-appear{
+  animation: appear  0.5s forwards ease-in;
 }
 
 
