@@ -103,8 +103,10 @@ html {
 
   .pl-sect {
     height: calc(100vh - 30px);
+    position: relative;
   }
 
+  /* ---------- SECTION 1 ---------- */
   .pl-sect1-bg {
     height: 100%;
     width: 90%;
@@ -242,10 +244,11 @@ html {
   }
 
 
+  /* DEPRECATED */
   /* ----- ARROW UP SMOOTH SCROLL ----- */
 
   /* DIV TO MARK THE PAGE'S VERY TOP */
-  .pl-top-marker {
+  /* .pl-top-marker {
     height: 30px;
     width: 30px;
     position: absolute;
@@ -258,10 +261,10 @@ html {
     transform: scaleY(-1);
     top: 0;
     transition: all 1s ease-in;
-  }
+  } */
 
 
-/* --------- CONTACT BOX AND TOGGLE BUTTON --------- */
+/* --------- INFO BOX AND TOGGLE BUTTON --------- */
 
   .pl-btn-contact{
     width: 45px;
@@ -319,6 +322,69 @@ html {
 
   .pl-info-box p{
     line-height: 20px;
+  }
+
+
+/* ---------- SECTION 2 ---------- */
+
+  /* ----- LEFT NAVBAR ----- */
+  .pl-left-bar{
+    display: table;
+    width: 145px;
+    position: absolute;
+    top: 27vh;
+  }
+
+  .pl-counter{
+    width: 100%;
+    height: 100px;
+    display: block;
+    margin-bottom: 80px;
+    position: relative;
+  }
+
+  .pl-counter::before{
+    content: '';
+    position: absolute;
+    height: 75%;
+    width: 25%;
+    background-color: #1C1C1C;
+    top: 32%;
+  }
+
+  .pl-counter span{
+    font-size: 100px;
+  }
+
+
+  .pl-left-nav{
+    display: table;
+    width: 100%;
+  }
+
+  .pl-nav-line{
+    width: 15%;
+    height: 1px;
+    background-color: #bcbcbc;
+    display: block;
+    margin-bottom: 80px;
+    margin-left: 30px;
+  }
+
+  .pl-nav-line:last-child{
+    margin-bottom: 30px;
+  }
+
+  .pl-line-active{
+    width: 55%;
+    height: 2px;
+  }
+
+  .pl-next-prev{
+    width: 75%;
+    height: 45px;
+    display: block;
+    border-radius: 0 25px 25px 0;
   }
 
 }
@@ -427,6 +493,10 @@ html {
 
 .pl-appear{
   animation: appear  0.5s forwards ease-in;
+}
+
+.pl-no-padding{
+  padding: 0;
 }
 
 

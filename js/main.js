@@ -50,17 +50,21 @@ btnContact.addEventListener("click", function(){
 // USING WAYPOINTS
 
 var waypoint = new Waypoint({
-  element: document.querySelector('.pl-arrowdown-box'),
+  // element: document.querySelector('.pl-arrowdown-box'),
+  element: document.querySelector('.pl-left-bar'),
   handler: function() {
-    this.element.classList.toggle('pl-fadeout');
+    arrowdown = document.querySelector('.pl-arrowdown-box');
+    arrowdown.classList.toggle('pl-fadeout');
   },
-  offset: '80%'
+  // offset: 'bottom-in-view'
+  offset: '50%'
 });
 
-var waypoint = new Waypoint({
-  element: document.querySelector('.pl-arrowup-box'),
-  handler: function() {
-    this.element.classList.toggle('pl-appear');
-  },
-  offset: -20
-});
+// DEPRECATED
+// var waypoint = new Waypoint({
+//   element: document.querySelector('.pl-arrowup-box'),
+//   handler: function() {
+//     this.element.classList.toggle('pl-appear');
+//   },
+//   offset: -20
+// });
