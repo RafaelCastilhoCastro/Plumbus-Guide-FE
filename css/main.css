@@ -116,7 +116,6 @@ html {
     background-repeat: no-repeat;
     background-position: 20% 90%;
     opacity: 0.7;
-    z-index: 0;
     transform: rotateY(180deg);
   }
 
@@ -139,7 +138,7 @@ html {
     position: fixed;
     top: -1em;
     left: -0.5em;
-    z-index: 150;
+    z-index: 20;
     display: none;
   }
 
@@ -153,7 +152,7 @@ html {
     top: -100%;
     left: 0;
     right: 0;
-    z-index: 160;
+    z-index: 21;
     margin: auto;
     border-radius: 30px 0 30px 30px;
     padding: 30px;
@@ -314,6 +313,7 @@ html {
     position: fixed;
     bottom: 98px;
     right: 65px;
+    z-index: 10;
   }
 
   .pl-social-links a{
@@ -335,7 +335,7 @@ html {
     top: 27vh;
   }
 
-  .pl-counter{
+  .pl-big-counter-container{
     width: 100%;
     height: 100px;
     display: block;
@@ -343,7 +343,7 @@ html {
     position: relative;
   }
 
-  .pl-counter::before{
+  .pl-big-counter-container::before{
     content: '';
     position: absolute;
     height: 75%;
@@ -352,10 +352,18 @@ html {
     top: 32%;
   }
 
-  .pl-counter span{
+  .pl-big-counter{
+    display: block;
     font-size: 100px;
+    user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
   }
 
+  .pl-big-counter::first-letter{
+    color: #808080;
+  }
 
   .pl-left-nav{
     display: table;
@@ -363,29 +371,147 @@ html {
   }
 
   .pl-nav-line{
-    width: 15%;
+    width: 55%;
     height: 1px;
-    background-color: #bcbcbc;
+    background-color: #808080;
     display: block;
     margin-bottom: 80px;
     margin-left: 30px;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: deactivateLine 0.5s forwards cubic-bezier(.24,1.69,.75,.76);
+  }
+
+  @keyframes deactivateLine {
+    to{
+      width: 15%;
+    }
   }
 
   .pl-nav-line:last-child{
     margin-bottom: 30px;
   }
 
+
   .pl-line-active{
-    width: 55%;
-    height: 2px;
+    width: 15%;
+    background-color: #bcbcbc;
+    height: 1.5px;
+    animation: activateLine 0.5s forwards cubic-bezier(.24,1.69,.75,.76);
+  }
+
+  @keyframes activateLine {
+    to{
+      width: 55%;
+    }
   }
 
   .pl-next-prev{
     width: 75%;
     height: 45px;
-    display: block;
     border-radius: 0 25px 25px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
   }
+
+  .pl-next-prev p{
+    display: inline-block;
+    margin-top: 0.5em;
+  }
+
+  .pl-current-proj {
+    margin-left: 7px;
+    font-weight: bold;
+  }
+
+  .pl-total-projs {
+    margin-right: 7px;
+  }
+
+  ion-icon{
+    cursor: pointer;
+  }
+
+  .pl-prev-icon{
+    transform: rotate(-180deg);
+  }
+
+  /* ---------- PROJECTS SLIDER ---------- */
+  .pl-slider-container {
+    height: 100vh;
+    display: block;
+    overflow: hidden;
+  }
+
+  .pl-slider-list{
+    height: 100vh;
+    display: block;
+    padding: 0;
+    list-style: none;
+  }
+
+  .pl-slider-item{
+    display: block;
+    height: 500px;
+    float: left;
+    margin-top: 31vh;
+  }
+
+  .pl-projOne-frame{
+    position: relative;
+    display: table;
+    background-color: #663399;
+    padding-top: 60px;
+    padding-bottom: 23px;
+    bottom: 12%
+  }
+
+  .pl-projOne-frame img{
+    position: relative;
+    left: -10%;
+  }
+
+  #projOne-site-btn{
+    padding-right: 6%;
+    position: relative;
+    z-index: 10;
+    right: -66%;
+    margin-top: 8px;
+    margin-bottom: -12px;
+
+  }
+
+  #projOne-site-btn:hover{
+    box-shadow: 4px 5px 8px #000;
+    color: #000;
+  }
+
+  .pl-access-site-icon{
+    position: absolute;
+    z-index: 10;
+    bottom: 4%;
+    right: 12%;
+  }
+
+  .pl-access-icon3, .pl-access-icon4{
+    right: 13%;
+  }
+
+  .pl-access-icon4, .pl-access-icon5{
+    bottom: 3.6%;
+  }
+
+  .pl-access-icon5{
+    right: 15%;
+  }
+
+
 
 }
 
@@ -537,6 +663,9 @@ p, label{
   color: #bcbcbc;
 }
 .pl-text-mdgray{
+  color: #808080;
+}
+.pl-text-darkgray{
   color: #1C1C1C;
 }
 .pl-text-black{
@@ -545,22 +674,22 @@ p, label{
 
 /* --------- BACKGROUND COLORS --------- */
 .pl-bg-prim-color{
-background-color: #800080;
+  background-color: #800080;
 }
 .pl-bg-sec-color{
-background-color: #663399;
+  background-color: #663399;
 }
 .pl-bg-lightgray{
-background-color: #bcbcbc;
+  background-color: #bcbcbc;
 }
 .pl-bg-mdgray{
-background-color: #1C1C1C;
+  background-color: #808080;
 }
 .pl-bg-darkgray{
-background-color: #121212;
+  background-color: #1C1C1C;
 }
 .pl-bg-black{
-background-color: #000;
+  background-color: #000;
 }
 
 
@@ -573,6 +702,7 @@ background-color: #000;
   font-weight: 600;
   transition: all 0.2s ease-out;
   box-shadow: 4px 5px 8px #800080;
+  font-family: "Proza libre", sans-serif;
 }
 
 .pl-btn-md {
