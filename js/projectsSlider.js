@@ -77,24 +77,24 @@ function addZero(n){
 }
 
 // Total projects number
-totalProjs.innerHTML = addZero(sliderTotalItems);
+totalProjs.textContent = addZero(sliderTotalItems);
 
 // Current project number (big and small counter)
 function counterPlus(){
-  let currNum = parseInt(currentProj.innerHTML);
+  let currNum = parseInt(currentProj.textContent);
   if (currNum < sliderTotalItems){
     currNum++;
-    currentProj.innerHTML = addZero(currNum);
-    bigCounter.innerHTML = addZero(currNum);
+    currentProj.textContent = addZero(currNum);
+    bigCounter.textContent = addZero(currNum);
   }
 }
 
 function counterMinus(){
-  let currNum = parseInt(currentProj.innerHTML);
+  let currNum = parseInt(currentProj.textContent);
   if (currNum <= sliderTotalItems && currNum >= 2){
     currNum--;
-    currentProj.innerHTML = addZero(currNum);
-    bigCounter.innerHTML = addZero(currNum);
+    currentProj.textContent = addZero(currNum);
+    bigCounter.textContent = addZero(currNum);
   }
 }
 

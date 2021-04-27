@@ -30,9 +30,12 @@
         </div>
       </div>
       <nav class="pl-topmenu">
-        <a class="pl-text-sec-color pl-prim-font" href="#">Home</a>
-        <a class="pl-text-sec-color pl-prim-font" href="#">Projects</a>
-        <a class="pl-text-sec-color pl-prim-font" href="#">About</a>
+        <ul>
+          <li><a class="pl-text-sec-color pl-prim-font" href="#">Home</a></li>
+          <li><a class="pl-text-sec-color pl-prim-font" href="#">Projects</a></li>
+          <li><a class="pl-text-sec-color pl-prim-font" href="#">About</a></li>
+        </ul>
+
       </nav>
     </header>
 
@@ -123,15 +126,6 @@
             <div class="pl-arrow-point"></div>
           </a>
         </div>
-
-        <!-- DEPRECATED -->
-        <!-- ARROW UP SMOOTH SCROLL -->
-        <!-- <div class="pl-arrowup-container">
-          <a href="#pl-top-marker" class="pl-arrowdown-box pl-arrowup-box pl-bg-prim-color">
-            <div class="pl-arrow-shaft"></div>
-            <div class="pl-arrow-point"></div>
-          </a>
-        </div> -->
       </section>
 
     <!-- CONTACT BTN, INFO BOX & ARROWDOWN CORNER -->
@@ -155,127 +149,131 @@
       <!-- SECTION 2 -->
       <section id="section2" class="pl-sect">
         <div class="container-fluid pl-no-padding">
-        <div class="row">
-          <!-- LEFT BAR -->
-          <div class="col-sm-2">
-            <div class="pl-left-bar">
-              <div class="pl-big-counter-container">
-                <span class="pl-big-counter pl-sec-font pl-text-sec-color">01</span>
-              </div>
-              <nav class="pl-left-nav">
-                <a href="#" class="pl-nav-line pl-line-active">01</a>
-                <a href="#" class="pl-nav-line">02</a>
-                <a href="#" class="pl-nav-line">03</a>
-                <a href="#" class="pl-nav-line">04</a>
-                <a href="#" class="pl-nav-line">05</a>
-              </nav>
-              <div class="pl-next-prev pl-bg-black">
-                <ion-icon class="pl-prev-icon pl-text-sec-color" name="send-sharp"></ion-icon>
-                <p class="pl-text-mdgray">
-                  <span class="pl-current-proj pl-text-lightgray">01</span>/<span class="pl-total-projs"></span>
-                </p>
-                <ion-icon class="pl-next-icon pl-text-sec-color" name="send-sharp"></ion-icon>
+          <div class="row">
+            <!-- LEFT BAR -->
+            <div class="col-sm-2">
+              <div class="pl-left-bar">
+                <div class="pl-big-counter-container">
+                  <span class="pl-big-counter pl-sec-font pl-text-sec-color">01</span>
+                </div>
+                <nav class="pl-left-nav">
+                  <a href="#" class="pl-nav-line pl-line-active">01</a>
+                  <a href="#" class="pl-nav-line">02</a>
+                  <a href="#" class="pl-nav-line">03</a>
+                  <a href="#" class="pl-nav-line">04</a>
+                  <a href="#" class="pl-nav-line">05</a>
+                </nav>
+                <div class="pl-next-prev pl-bg-black">
+                  <ion-icon class="pl-prev-icon pl-text-sec-color" name="send-sharp"></ion-icon>
+                  <p class="pl-text-mdgray">
+                    <span class="pl-current-proj pl-text-lightgray">01</span>/<span class="pl-total-projs"></span>
+                  </p>
+                  <ion-icon class="pl-next-icon pl-text-sec-color" name="send-sharp"></ion-icon>
+                </div>
               </div>
             </div>
-          </div>
-          <!-- PROJECTS SLIDER -->
-          <div class="col-sm-10">
-            <div class="pl-slider-container">
-              <ul class="pl-slider-list">
-                <li class="pl-slider-item pl-projOne">
-                  <div class="row">
-                    <div class="col-sm-5">
-                      <h1 class="pl-text-lightgray pl-sec-font pl-title-big">Think Factory</h1>
-                      <h3 class="pl-text-mdgray">Where ideas are created like a motherf...</h3>
-                      <br>
-                      <button class="pl-btn pl-btn-md pl-bg-sec-color" type="button" name="button">See project</button>
-                    </div>
-                    <div class="col-sm-6">
-                      <div class="pl-projOne-frame">
-                        <img src="images/thinkFactorySM.jpg" alt="think Factory" title="think Factory">
-                        <button id="projOne-site-btn" class="pl-btn pl-btn-md pl-bg-black pl-text-sec-color" type="button" name="button">Visit website</button>
-                        <ion-icon class="pl-access-site-icon pl-text-sec-color" name="navigate-sharp"></ion-icon>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li class="pl-slider-item pl-projTwo">
-                  <div class="row">
-                    <div class="col-sm-5">
-                      <h1 class="pl-text-lightgray pl-sec-font pl-title-big">Immersion+</h1>
-                      <h3 class="pl-text-mdgray">VR + Augmented reality. Immersive AF.</h3>
-                      <br>
-                      <button class="pl-btn pl-btn-md pl-bg-sec-color" type="button" name="button">See project</button>
-                    </div>
-                    <div class="col-sm-6">
-                      <div class="pl-projOne-frame">
-                        <img src="images/VR-rig.jpg" alt="VR rig" title="VR rig">
-                        <button id="projOne-site-btn" class="pl-btn pl-btn-md pl-bg-black pl-text-sec-color" type="button" name="button">Visit website</button>
-                        <ion-icon class="pl-access-site-icon pl-text-sec-color" name="navigate-sharp"></ion-icon>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li class="pl-slider-item pl-projThree">
-                  <div class="row">
-                    <div class="col-sm-5">
-                      <h1 class="pl-text-lightgray pl-sec-font pl-title-big">Machine learning</h1>
-                      <h3 class="pl-text-mdgray">Yep. Let's haste apocalypse.</h3>
-                      <br>
-                      <button class="pl-btn pl-btn-md pl-bg-sec-color" type="button" name="button">See project</button>
-                    </div>
-                    <div class="col-sm-6">
-                      <div class="pl-projOne-frame">
-                        <img src="images/machine-learning1.jpg" alt="machine learning" title="machine learning">
-                        <button id="projOne-site-btn" class="pl-btn pl-btn-md pl-bg-black pl-text-sec-color" type="button" name="button">Visit website</button>
-                        <ion-icon class="pl-access-site-icon pl-access-icon3 pl-text-sec-color" name="navigate-sharp"></ion-icon>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li class="pl-slider-item pl-projFour">
-                  <div class="row">
-                    <div class="col-sm-5">
-                      <h1 class="pl-text-lightgray pl-sec-font pl-title-big">DoMore</h1>
-                      <h3 class="pl-text-mdgray">Improve everything.</h3>
-                      <br>
-                      <button class="pl-btn pl-btn-md pl-bg-sec-color" type="button" name="button">See project</button>
-                    </div>
-                    <div class="col-sm-6">
-                      <div class="pl-projOne-frame">
-                        <img src="images/do-more.jpg" alt="do more" title="do more">
-                        <button id="projOne-site-btn" class="pl-btn pl-btn-md pl-bg-black pl-text-sec-color" type="button" name="button">Visit website</button>
-                        <ion-icon class="pl-access-site-icon pl-access-icon4 pl-text-sec-color" name="navigate-sharp"></ion-icon>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li class="pl-slider-item pl-projFive">
-                  <div class="row">
-                    <div class="col-sm-5">
-                      <h1 class="pl-text-lightgray pl-sec-font pl-title-big">Hey Studio</h1>
-                      <h3 class="pl-text-mdgray">You. Connected. Now.</h3>
-                      <br>
-                      <button class="pl-btn pl-btn-md pl-bg-sec-color" type="button" name="button">See project</button>
-                    </div>
-                    <div class="col-sm-6">
-                      <div class="pl-projOne-frame">
-                        <img src="images/heyStudio.jpg" alt="hey studio" title="hey studio">
-                        <button id="projOne-site-btn" class="pl-btn pl-btn-md pl-bg-black pl-text-sec-color" type="button" name="button">Visit website</button>
-                        <ion-icon class="pl-access-site-icon pl-access-icon5 pl-text-sec-color" name="navigate-sharp"></ion-icon>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
 
+            <!-- PROJECTS SLIDER -->
+            <div class="col-sm-10">
+              <div class="pl-slider-container">
+                <ul class="pl-slider-list">
+                  <!-- Project 1 -->
+                  <li class="pl-slider-item pl-projOne">
+                    <div class="row">
+                      <div class="col-sm-5">
+                        <h1 class="pl-text-lightgray pl-sec-font pl-title-big">Think Factory</h1>
+                        <h3 class="pl-text-mdgray">Where ideas are created like a motherf...</h3>
+                        <br>
+                        <button class="pl-btn pl-btn-md pl-bg-sec-color" type="button" name="button">See project</button>
+                      </div>
+                      <div class="col-sm-6">
+                        <div class="pl-projOne-frame">
+                          <img src="images/thinkFactorySM.jpg" alt="think Factory" title="think Factory">
+                          <button id="projOne-site-btn" class="pl-btn pl-btn-md pl-bg-black pl-text-sec-color" type="button" name="button">Visit website</button>
+                          <ion-icon class="pl-access-site-icon pl-text-sec-color" name="navigate-sharp"></ion-icon>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <!-- Project 2 -->
+                  <li class="pl-slider-item pl-projTwo">
+                    <div class="row">
+                      <div class="col-sm-5">
+                        <h1 class="pl-text-lightgray pl-sec-font pl-title-big">Immersion+</h1>
+                        <h3 class="pl-text-mdgray">VR + Augmented reality. Immersive AF.</h3>
+                        <br>
+                        <button class="pl-btn pl-btn-md pl-bg-sec-color" type="button" name="button">See project</button>
+                      </div>
+                      <div class="col-sm-6">
+                        <div class="pl-projOne-frame">
+                          <img src="images/VR-rig.jpg" alt="VR rig" title="VR rig">
+                          <button id="projOne-site-btn" class="pl-btn pl-btn-md pl-bg-black pl-text-sec-color" type="button" name="button">Visit website</button>
+                          <ion-icon class="pl-access-site-icon pl-text-sec-color" name="navigate-sharp"></ion-icon>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <!-- Project 3 -->
+                  <li class="pl-slider-item pl-projThree">
+                    <div class="row">
+                      <div class="col-sm-5">
+                        <h1 class="pl-text-lightgray pl-sec-font pl-title-big">Machine learning</h1>
+                        <h3 class="pl-text-mdgray">Yep. Let's haste apocalypse.</h3>
+                        <br>
+                        <button class="pl-btn pl-btn-md pl-bg-sec-color" type="button" name="button">See project</button>
+                      </div>
+                      <div class="col-sm-6">
+                        <div class="pl-projOne-frame">
+                          <img src="images/machine-learning1.jpg" alt="machine learning" title="machine learning">
+                          <button id="projOne-site-btn" class="pl-btn pl-btn-md pl-bg-black pl-text-sec-color" type="button" name="button">Visit website</button>
+                          <ion-icon class="pl-access-site-icon pl-access-icon3 pl-text-sec-color" name="navigate-sharp"></ion-icon>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <!-- Project 4 -->
+                  <li class="pl-slider-item pl-projFour">
+                    <div class="row">
+                      <div class="col-sm-5">
+                        <h1 class="pl-text-lightgray pl-sec-font pl-title-big">DoMore</h1>
+                        <h3 class="pl-text-mdgray">Improve everything.</h3>
+                        <br>
+                        <button class="pl-btn pl-btn-md pl-bg-sec-color" type="button" name="button">See project</button>
+                      </div>
+                      <div class="col-sm-6">
+                        <div class="pl-projOne-frame">
+                          <img src="images/do-more.jpg" alt="do more" title="do more">
+                          <button id="projOne-site-btn" class="pl-btn pl-btn-md pl-bg-black pl-text-sec-color" type="button" name="button">Visit website</button>
+                          <ion-icon class="pl-access-site-icon pl-access-icon4 pl-text-sec-color" name="navigate-sharp"></ion-icon>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <!-- Project 5 -->
+                  <li class="pl-slider-item pl-projFive">
+                    <div class="row">
+                      <div class="col-sm-5">
+                        <h1 class="pl-text-lightgray pl-sec-font pl-title-big">Hey Studio</h1>
+                        <h3 class="pl-text-mdgray">You. Connected. Now.</h3>
+                        <br>
+                        <button class="pl-btn pl-btn-md pl-bg-sec-color" type="button" name="button">See project</button>
+                      </div>
+                      <div class="col-sm-6">
+                        <div class="pl-projOne-frame">
+                          <img src="images/heyStudio.jpg" alt="hey studio" title="hey studio">
+                          <button id="projOne-site-btn" class="pl-btn pl-btn-md pl-bg-black pl-text-sec-color" type="button" name="button">Visit website</button>
+                          <ion-icon class="pl-access-site-icon pl-access-icon5 pl-text-sec-color" name="navigate-sharp"></ion-icon>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
-
-  </div>
+      </section>
+    </div>
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js" integrity="sha512-fHXRw0CXruAoINU11+hgqYvY/PcsOWzmj0QmcSOtjlJcqITbPyypc8cYpidjPurWpCnlB8VKfRwx6PIpASCUkQ==" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/shortcuts/inview.min.js" integrity="sha512-g6IhMPPqSSUgE+lYgBpdsXICK0fNhDlDDEuIbphNIKfPTYFD/1VcnxA+7pS9mibvzIb5SB0nNvii5M+yMwkcJA==" crossorigin="anonymous"></script>
@@ -289,7 +287,6 @@
 
 <!-- TASKS DONE
 
-projectsSlider js file separated
-projects slider in prog
+
 
  -->

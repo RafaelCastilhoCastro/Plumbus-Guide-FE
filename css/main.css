@@ -8,6 +8,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+a:hover{
+  color: #663399;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -93,13 +97,6 @@ html {
     border: 1px solid #800080;
     margin: 30px;
   }
-  /* DEPRECATED */
-  /* .pl-wrapperfront{
-    height: 100%;
-    width: 100%;
-    display: block;
-    border: 1px solid #800080;
-  } */
 
   .pl-sect {
     height: calc(100vh - 30px);
@@ -534,21 +531,29 @@ html {
     margin-left: 10px;
   }
 
+  .pl-topmenu ul{
+    list-style: none;
+  }
+
+  .pl-topmenu li {
+    float: left;
+  }
+
   .pl-topmenu a {
     text-decoration: none;
     font-size: 16px;
     text-transform: uppercase;
     display: inline-block;
     margin: 51px 20px 0 20px;
+    padding: 0 5px;
     font-weight: 400;
     position: relative;
   }
 
-/* It needs fix pushing foward next link */
-  /* .pl-topmenu a:hover {
-    color: #800080;
-    font-weight: bolder;
-  } */
+  .pl-topmenu a:hover {
+    color: #663399;
+    text-shadow: 1px 1px 1px #663399;
+  }
 
   .pl-topmenu a:before {
     content:'';
