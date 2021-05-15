@@ -29,8 +29,6 @@ var nextItem = document.querySelector('.pl-next-icon');
 var sliderPos = 0;
 
 
-// Handlers
-
 // Slider next item animation
 function sliderNextItem(){
   var lastItem = sliderListWidth - sliderItemWidth;
@@ -40,10 +38,14 @@ function sliderNextItem(){
   }
 
   sliderPos -= sliderItemWidth;
-  anime ({
-    targets: sliderList,
-    translateX: sliderPos
-  });
+  var sliderPosStr = sliderPos.toString();
+  sliderList.style.transform = "translateX(" + sliderPosStr + "px)";
+
+  // anime ({
+  //   targets: sliderList,
+  //   translateX: sliderPos,
+  //   easing: 'easeOutQuint'
+  // });
 }
 
 // Slider previous item animation
@@ -53,10 +55,15 @@ function sliderPrevItem(){
   }
 
   sliderPos += sliderItemWidth;
-  anime ({
-    targets: sliderList,
-    translateX: sliderPos
-  })
+  var sliderPosStr = sliderPos.toString();
+  sliderList.style.transform = "translateX(" + sliderPosStr + "px)";
+
+
+  // anime ({
+  //   targets: sliderList,
+  //   translateX: sliderPos,
+  //   easing: 'easeOutQuint'
+  // })
 }
 
 
@@ -99,7 +106,7 @@ function counterMinus(){
 }
 
 // Nav-lines effects
-navLines = document.querySelectorAll('.pl-nav-line');
+var navLines = document.querySelectorAll('.pl-nav-line');
 
 function updateLines(){
   for (let i = 0; i < navLines.length; i++) {
@@ -111,15 +118,76 @@ function updateLines(){
 }
 
 
-// Triggers
+// Projects images scale
+var projImages = document.querySelectorAll('.pl-projImg');
+
+function scaleImg(){
+  for (let i = 0; i < projImages.length; i++) {
+    projImages[i].classList.remove('pl-scaleUp');
+    let imgNum = projImages[i].getAttribute('data-imgNum');
+    if (imgNum === currentProj.textContent) {
+      projImages[i].classList.add('pl-scaleUp');
+    }
+  }
+}
+
+
+
+// Projects title animation
+const projTitle = (entries, observer) => {
+  entries.forEach(entry => {
+    entry.target.classList.toggle("pl-animLetters", entry.isIntersecting);
+  });
+};
+
+const projTitleOpt = {
+  threshold: 1.0
+}
+
+const obsProjTitle = new IntersectionObserver(projTitle, projTitleOpt);
+
+const projTitles = document.querySelectorAll('.pl-projTitle');
+
+for (let i = 0; i < projTitles.length; i++) {
+  obsProjTitle.observe(projTitles[i]);
+}
+
+
+
+// Projects subtitle & btn animation
+const projSubtitle = (entries, observer) => {
+  entries.forEach(entry => {
+    entry.target.classList.toggle("pl-appear", entry.isIntersecting);
+  });
+};
+
+const projSubtitleOpt = {
+  threshold: 1.0
+}
+
+const obsProjSubtitle = new IntersectionObserver(projSubtitle, projSubtitleOpt);
+
+const projSubtitles = document.querySelectorAll('.pl-projSubtitle');
+
+for (let i = 0; i < projSubtitles.length; i++) {
+  obsProjSubtitle.observe(projSubtitles[i]);
+}
+
+
+
+
+// ------- TRIGGERS -------
+
 nextItem.addEventListener('click', function(){
   sliderNextItem();
   counterPlus();
   updateLines();
+  scaleImg()
 })
 
 prevItem.addEventListener('click', function(){
   sliderPrevItem();
   counterMinus();
   updateLines();
+  scaleImg()
 })

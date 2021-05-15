@@ -104,6 +104,14 @@ html {
   }
 
   /* ---------- SECTION 1 ---------- */
+
+  .pl-top-marker {
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top: 0;
+  }
+
   .pl-sect1-bg {
     height: 100%;
     width: 90%;
@@ -121,7 +129,6 @@ html {
   }
 
   .pl-btn-getnow {
-    visibility: visible;
     position: fixed;
     margin: 1px;
   }
@@ -156,15 +163,15 @@ html {
     visibility: hidden;
   }
 
+  .pl-Anim-Slide-Top{
+    animation: slideFromTop 0.5s forwards cubic-bezier(.24,1.69,.75,.76);
+  }
+
   @keyframes slideFromTop {
     to {
       top: 30%;
       visibility: visible;
     }
-  }
-
-  .pl-Anim-Slide-Top{
-    animation: slideFromTop 0.5s forwards cubic-bezier(.24,1.69,.75,.76);
   }
 
   .pl-modal-header p{
@@ -238,26 +245,6 @@ html {
     position: relative;
     bottom: -30%;
   }
-
-
-  /* DEPRECATED */
-  /* ----- ARROW UP SMOOTH SCROLL ----- */
-
-  /* DIV TO MARK THE PAGE'S VERY TOP */
-  /* .pl-top-marker {
-    height: 30px;
-    width: 30px;
-    position: absolute;
-    top: 0;
-  }
-
-  .pl-arrowup-box {
-    opacity: 0;
-    visibility: hidden;
-    transform: scaleY(-1);
-    top: 0;
-    transition: all 1s ease-in;
-  } */
 
 
 /* --------- INFO BOX AND TOGGLE BUTTON --------- */
@@ -343,7 +330,7 @@ html {
   .pl-big-counter-container::before{
     content: '';
     position: absolute;
-    height: 75%;
+    height: 100%;
     width: 25%;
     background-color: #1C1C1C;
     top: 32%;
@@ -451,6 +438,7 @@ html {
     display: block;
     padding: 0;
     list-style: none;
+    transition: transform 0.5s cubic-bezier(0.075, 0.820, 0.165, 1.000);
   }
 
   .pl-slider-item{
@@ -460,7 +448,7 @@ html {
     margin-top: 31vh;
   }
 
-  .pl-projOne-frame{
+  .pl-projImg-frame{
     position: relative;
     display: table;
     background-color: #663399;
@@ -469,48 +457,73 @@ html {
     bottom: 12%
   }
 
-  .pl-projOne-frame img{
+  .pl-projImg-frame img{
     position: relative;
     left: -10%;
   }
 
-  #projOne-site-btn{
+  .pl-projs-website-btn{
     padding-right: 6%;
     position: relative;
     z-index: 10;
-    right: -66%;
-    margin-top: 8px;
+    right: -60.5%;
+    margin-top: 10px;
     margin-bottom: -12px;
-
+    padding-right: 45px !important;
+    color: #bcbcbc;
   }
 
-  #projOne-site-btn:hover{
-    box-shadow: 4px 5px 8px #000;
-    color: #000;
+  .pl-projs-website-btn:hover{
+    box-shadow: 4px 5px 8px #000 !important;
+    color: #fff !important;
+  }
+
+  #proj3-website-btn, #proj4-website-btn{
+    right: -61.8%;
+  }
+
+  #proj5-website-btn{
+    right: -64.2%;
   }
 
   .pl-access-site-icon{
     position: absolute;
     z-index: 10;
-    bottom: 4%;
+    bottom: 30%;
     right: 12%;
+    color: #bcbcbc;
   }
 
-  .pl-access-icon3, .pl-access-icon4{
-    right: 13%;
+  .pl-website-hover:hover ion-icon{
+    color: white !important;
   }
 
-  .pl-access-icon4, .pl-access-icon5{
-    bottom: 3.6%;
+
+  .pl-projTitle {
+    visibility: hidden;
   }
 
-  .pl-access-icon5{
-    right: 15%;
+  .pl-projSubtitle{
+    opacity: 0;
+    transition: opacity 1s 0.7s;
   }
 
+
+  /* ------- FEATURES PAGE ------- */
+  .pl-feat-items{
+    margin-top: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .pl-plumbusImg{
+    width: 50%;
+  }
 
 
 }
+
 
 
 
@@ -541,13 +554,14 @@ html {
 
   .pl-topmenu a {
     text-decoration: none;
-    font-size: 16px;
+    font-size: 24px;
     text-transform: uppercase;
     display: inline-block;
     margin: 51px 20px 0 20px;
     padding: 0 5px;
-    font-weight: 400;
+    font-weight: 600;
     position: relative;
+    font-family: "Proza Libre";
   }
 
   .pl-topmenu a:hover {
@@ -574,6 +588,9 @@ html {
   }
 
 
+
+
+
 }
 
 @media screen and (min-width: 1200px){
@@ -591,6 +608,10 @@ html {
 
 /* --------- AUXILIARY CLASSES --------- */
 
+.pl-text-align-r{
+  text-align: right;
+}
+
 .pl-toggleDisplayBlock{
   display: block;
 }
@@ -599,6 +620,13 @@ html {
   display: none;
 }
 
+.pl-fadeout {
+  animation: fade-out 0.5s forwards ease-in;
+}
+
+.pl-fadeout-delay {
+  animation: fade-out 0.5s forwards 0.4s ease-in;
+}
 
 @keyframes fade-out {
   to {
@@ -607,28 +635,42 @@ html {
   }
 }
 
-.pl-fadeout-delay {
-  animation: fade-out 1s forwards 1s ease-in;
-}
-
-.pl-fadeout {
-  animation: fade-out 0.5s forwards ease-in;
-}
-
-@keyframes appear {
-  to{
-    opacity: 1;
-    visibility: visible;
-  }
-}
-
-.pl-appear{
-  animation: appear  0.5s forwards ease-in;
-}
-
 .pl-no-padding{
   padding: 0;
 }
+
+.pl-scaleUp{
+  animation: scaleUp 0.7s forwards;
+}
+
+@keyframes scaleUp {
+  from{
+    transform: scale(0);
+  }
+  to{
+    transform: scale(1);
+  }
+}
+
+.pl-animLetters{
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  letter-spacing: .05em;
+  animation: typing 1.5s steps(20) forwards;
+}
+
+@keyframes typing {
+  to {
+    width: 100%;
+    visibility: visible;
+   }
+}
+
+.pl-appear{
+  opacity: 1;
+}
+
 
 
 /* --------- TEXTS --------- */
@@ -705,7 +747,7 @@ p, label{
   text-decoration: none;
   border: none;
   font-weight: 600;
-  transition: all 0.2s ease-out;
+  transition: background-color 0.2s ease-out, color 0.2s ease-out, box-shadow 0.2s ease-out, opacity 1s 0.7s;
   box-shadow: 4px 5px 8px #800080;
   font-family: "Proza libre", sans-serif;
 }
@@ -714,14 +756,14 @@ p, label{
   height: 38px;
   padding: 0 27px;
   border-radius: 19px;
-  font-size: 14px;
+  font-size: 18px;
 }
 
 .pl-btn-lg {
   height: 45px;
   padding: 0 35px;
   border-radius: 25px;
-  font-size: 18px;
+  font-size: 24px;
 }
 
 .pl-btn-lg:hover, .pl-btn-md:hover{
