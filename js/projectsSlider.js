@@ -133,7 +133,7 @@ function scaleImg(){
 
 
 
-// Projects title animation
+// Projects titles animation
 const projTitle = (entries, observer) => {
   entries.forEach(entry => {
     entry.target.classList.toggle("pl-animLetters", entry.isIntersecting);
