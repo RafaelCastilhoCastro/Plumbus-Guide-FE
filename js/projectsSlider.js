@@ -41,11 +41,6 @@ function sliderNextItem(){
   var sliderPosStr = sliderPos.toString();
   sliderList.style.transform = "translateX(" + sliderPosStr + "px)";
 
-  // anime ({
-  //   targets: sliderList,
-  //   translateX: sliderPos,
-  //   easing: 'easeOutQuint'
-  // });
 }
 
 // Slider previous item animation

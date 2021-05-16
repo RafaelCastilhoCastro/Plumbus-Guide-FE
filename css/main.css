@@ -242,11 +242,13 @@ html {
 
 /* FADE ON ARROW DOWN ON SCROLL USING AOS ANIM */
   [data-aos="arrowDownFade"] {
-    opacity: 0;
-    transition-property: opacity;
+    opacity: 1;
+    visibility: visible;
+    transition-property: visibility, opacity;
   }
   [data-aos="arrowDownFade"].aos-animate {
-        opacity: 1;
+        opacity: 0;
+        visibility: hidden;
     }
   }
 
