@@ -23,15 +23,3 @@ btnContact.addEventListener("click", function(){
     infoBox.classList.toggle('pl-toggleDisplayBlock');
     arrowCorner.classList.toggle('pl-toggleDisplayBlock');
 });
-
-
-// --- FADE EFFECT OF ARROW DOWN ON PAGE SCROLL USING WAYPOINTS ---
-
-// var waypoint = new Waypoint({
-//   element: document.querySelector('.pl-left-bar'),
-//   handler: function() {
-//     arrowdown = document.querySelector('.pl-arrowdown-box');
-//     arrowdown.classList.toggle('pl-fadeout');
-//   },
-//   offset: '50%'
-// });

@@ -6,15 +6,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;0,800;1,400;1,700;1,800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Proza+Libre:wght@500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <title></title>
   </head>
 
   <body class="pl-bg-black">
-
-    <!-- DEPRECATED -->
-    <!-- <div id="pl-top-marker" class="pl-top-marker">
-    </div> -->
 
     <!-- PRE-LOADER PAGE -->
     <div class="pl-preloader pl-bg-darkgray">
@@ -52,7 +49,7 @@
         <div class="container"> <!-- BOOTSTRAP CONTAINER -->
           <div class="row">
             <div class="col-sm-12 col-md-3 offset-md-2 intro-text">
-              <h1 class="pl-title-big pl-sec-font pl-text-prim-color">PLUMBUS</h1>
+              <h1 class="testClass pl-title-big pl-sec-font pl-text-prim-color">PLUMBUS</h1>
               <p><span class="pl-title pl-text-sec-color">W</span>elcome to the exciting world of Plumbus ownership!
                 <br>
                 <br>A Plumbus will aid many things in life, making life easier.
@@ -122,7 +119,7 @@
 
         <!-- ARROW DOWN SMOOTH SCROLL -->
         <div class="pl-arrowdown-container">
-          <a href="#section2" class="pl-arrowdown-box pl-bg-prim-color">
+          <a href="#section2" class="pl-arrowdown-box pl-bg-prim-color" data-aos="arrowDownFade">
             <div class="pl-arrow-shaft"></div>
             <div class="pl-arrow-point"></div>
           </a>
@@ -282,9 +279,16 @@
     <script type="text/javascript" src="js/anime.min.js"></script>
     <script type="text/javascript" src="js/preloadPage.js"></script>
     <script type="text/javascript" src="js/projectsSlider.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
+
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
+
+
 
 
 <!-- TASKS DONE

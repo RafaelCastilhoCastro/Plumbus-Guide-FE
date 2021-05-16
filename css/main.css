@@ -103,14 +103,8 @@ html {
     position: relative;
   }
 
-  /* ---------- SECTION 1 ---------- */
 
-  .pl-top-marker {
-    height: 30px;
-    width: 30px;
-    position: absolute;
-    top: 0;
-  }
+  /* ---------- SECTION 1 ---------- */
 
   .pl-sect1-bg {
     height: 100%;
@@ -245,6 +239,17 @@ html {
     position: relative;
     bottom: -30%;
   }
+
+/* FADE ON ARROW DOWN ON SCROLL USING AOS ANIM */
+  [data-aos="arrowDownFade"] {
+    opacity: 0;
+    transition-property: opacity;
+  }
+  [data-aos="arrowDownFade"].aos-animate {
+        opacity: 1;
+    }
+  }
+
 
 
 /* --------- INFO BOX AND TOGGLE BUTTON --------- */
