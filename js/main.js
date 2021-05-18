@@ -13,7 +13,6 @@ for (let i = 0; i < toggleModal.length; i++) {
 
 
 // ------- SLIDE EFFECT ON CONTACT BTN & INFO BOX -------
-
 var btnContact = document.querySelector(".pl-btn-contact");
 var infoBox = document.querySelector(".pl-info-box");
 var arrowCorner = document.querySelector(".pl-contact-arrowcorner");

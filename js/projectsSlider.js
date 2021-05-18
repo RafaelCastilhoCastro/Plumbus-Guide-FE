@@ -21,15 +21,15 @@ sliderList.style.width = sliderListWidth+'px';
 
 
 
-// ------- PROJECTS SLIDER ANIMATION WITH ANIMEJS -------
+// ------- PROJECTS SLIDER ANIMATION  -------
 
-// Variables
+// VARIABLES
 var prevItem = document.querySelector('.pl-prev-icon');
 var nextItem = document.querySelector('.pl-next-icon');
 var sliderPos = 0;
 
 
-// Slider next item animation
+// SLIDER NEXT ITEM ANIMATION
 function sliderNextItem(){
   var lastItem = sliderListWidth - sliderItemWidth;
 
@@ -43,7 +43,7 @@ function sliderNextItem(){
 
 }
 
-// Slider previous item animation
+// SLIDER PREVIOUS ITEM ANIMATION
 function sliderPrevItem(){
   if (sliderPos === 0) {
     return;
@@ -52,13 +52,6 @@ function sliderPrevItem(){
   sliderPos += sliderItemWidth;
   var sliderPosStr = sliderPos.toString();
   sliderList.style.transform = "translateX(" + sliderPosStr + "px)";
-
-
-  // anime ({
-  //   targets: sliderList,
-  //   translateX: sliderPos,
-  //   easing: 'easeOutQuint'
-  // })
 }
 
 
@@ -78,10 +71,10 @@ function addZero(n){
   }
 }
 
-// Total projects number
+// TOTAL PROJECTS NUMBER
 totalProjs.textContent = addZero(sliderTotalItems);
 
-// Current project number (big and small counter)
+// CURRENT PROJECT NUMBER (BIG & SMALL COUNTERS)
 function counterPlus(){
   let currNum = parseInt(currentProj.textContent);
   if (currNum < sliderTotalItems){
@@ -100,7 +93,7 @@ function counterMinus(){
   }
 }
 
-// Nav-lines effects
+// NAV-LINES EFFETCS
 var navLines = document.querySelectorAll('.pl-nav-line');
 
 function updateLines(){
@@ -113,7 +106,7 @@ function updateLines(){
 }
 
 
-// Projects images scale
+// PROJECTS IMAGES SCALE
 var projImages = document.querySelectorAll('.pl-projImg');
 
 function scaleImg(){
@@ -128,7 +121,7 @@ function scaleImg(){
 
 
 
-// Projects titles animation
+// PROJECTS TITLES ANIMATION
 const projTitle = (entries, observer) => {
   entries.forEach(entry => {
     entry.target.classList.toggle("pl-animLetters", entry.isIntersecting);
@@ -149,7 +142,7 @@ for (let i = 0; i < projTitles.length; i++) {
 
 
 
-// Projects subtitle & btn animation
+// PROJECTS SUBTITLE & BTN ANIMATION
 const projSubtitle = (entries, observer) => {
   entries.forEach(entry => {
     entry.target.classList.toggle("pl-appear", entry.isIntersecting);

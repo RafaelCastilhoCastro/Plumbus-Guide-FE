@@ -240,6 +240,7 @@ html {
     bottom: -30%;
   }
 
+
 /* FADE ON ARROW DOWN ON SCROLL USING AOS ANIM */
   [data-aos="arrowDownFade"] {
     opacity: 1;
@@ -254,7 +255,7 @@ html {
 
 
 
-/* --------- INFO BOX AND TOGGLE BUTTON --------- */
+/* -------- INFO BOX AND TOGGLE BUTTON --------- */
 
   .pl-btn-contact{
     width: 45px;
@@ -524,9 +525,11 @@ html {
     justify-content: space-between;
   }
 
-  .pl-plumbusImg{
+  .pl-featImg{
     width: 50%;
+    opacity: 0.6;
   }
+
 
 
 }
