@@ -79,6 +79,26 @@ html {
     z-index: 12;
   }
 
+  .pl-feat-title{
+    position: absolute;
+    margin-left: 30px;
+    z-index: 13;
+    top: 128px;
+    padding-left: 8px;
+    padding-top: 30px;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    display: table;
+    width: 74.9px;
+    color: black;
+    background-color: purple;
+    font-size: 40px !important;
+    border: solid 5px purple;
+    border-radius: 0 0 5px 5px;
+  }
+
+
+
   .pl-icon {
     height: 110%;
     width: 50%;
@@ -299,7 +319,7 @@ html {
   .pl-contact-arrowcorner{
     height: 0;
     width: 0;
-    border-top: 20px solid black;
+    border-top: 20px solid #1C1C1C;
     border-left: 20px solid transparent;
     display: none;
     position: fixed;
@@ -340,8 +360,8 @@ html {
     position: absolute;
     height: 100%;
     width: 25%;
-    background-color: #1C1C1C;
-    top: 32%;
+    background-color: black;
+    top: 18%;
   }
 
   .pl-big-counter{
@@ -529,6 +549,8 @@ html {
     width: 50%;
     opacity: 0.6;
   }
+
+
 
 
 
