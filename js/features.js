@@ -1,4 +1,5 @@
 anime({
   targets: '.pl-feat-title',
-  backgroundColor: '#FFF'
+  // height: 386px;
+  // paddingTop: 30
 });
