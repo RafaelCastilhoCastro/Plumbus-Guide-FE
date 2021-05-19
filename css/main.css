@@ -72,42 +72,47 @@ html {
   }
 
   .pl-logo-front {
+    position: relative;
     height: 100%;
     width: 100%;
     border-radius: 60px 5px 5px 5px;
     margin-left: 0.04em;
-    z-index: 12;
+    z-index: 13;
   }
 
   .pl-feat-title{
     position: absolute;
-    margin-left: 30px;
-    z-index: 13;
-    top: 104px;
-    padding-left: 8px;
-    padding-top: 30px;
+    height: 0;
+    width: 75.6px;
+    top: 80px;
+    padding-left: 12px;
+    padding-top: 0;
     writing-mode: vertical-lr;
     text-orientation: upright;
-    height: 386;
-    width: 74.9px;
     letter-spacing: -12px;
     color: black;
     background-color: purple;
     font-size: 40px !important;
-    border: solid 5px purple;
+    border-left: 0.7px solid rebeccapurple;
     border-radius: 0 0 5px 5px;
-    /* overflow: hidden; */
-    /* white-space: nowrap; */
+    z-index: 12;
+    user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
   }
 
 
 
   .pl-icon {
+    position: relative;
     height: 110%;
     width: 50%;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+    z-index: 14;
   }
 
 
