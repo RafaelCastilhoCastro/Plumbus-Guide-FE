@@ -80,29 +80,6 @@ html {
     z-index: 13;
   }
 
-  .pl-feat-title{
-    position: absolute;
-    height: 0;
-    width: 75.6px;
-    top: 80px;
-    padding-left: 12px;
-    padding-top: 0;
-    writing-mode: vertical-lr;
-    text-orientation: upright;
-    letter-spacing: -12px;
-    color: black;
-    background-color: purple;
-    font-size: 40px !important;
-    border-left: 0.7px solid rebeccapurple;
-    border-radius: 0 0 5px 5px;
-    z-index: 12;
-    user-select: none;
-    -ms-user-select: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-  }
-
-
 
   .pl-icon {
     position: relative;
@@ -558,12 +535,82 @@ html {
     opacity: 0.6;
   }
 
+  .pl-feat-title{
+    position: absolute;
+    height: 0;
+    width: 75.6px;
+    top: 80px;
+    padding-left: 12px;
+    padding-top: 0;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    letter-spacing: -12px;
+    color: black;
+    background-color: purple;
+    font-size: 40px !important;
+    border-left: 0.7px solid rebeccapurple;
+    border-radius: 0 0 5px 5px;
+    z-index: 12;
+    user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+  }
+
+  .pl-feat-items:nth-child(odd){
+  }
+
+  [data-aos="pl-init-anim-fadeR"] {
+    transition-property: transform, opacity;
+  }
+  [data-aos="pl-init-anim-fadeR"].aos-animate{
+    opacity: 0;
+    transform: translateX(400px);
+  }
+
+  [data-aos="pl-anim-fadeL"] {
+    opacity: 0;
+    transform: translateX(-400px);
+    transition-property: transform, opacity;
+  }
+  [data-aos="pl-anim-fadeL"].aos-animate{
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  [data-aos="pl-anim-fadeR"] {
+    opacity: 0;
+    transform: translateX(400px);
+    transition-property: transform, opacity;
+  }
+  [data-aos="pl-anim-fadeR"].aos-animate{
+    opacity: 1;
+    transform: translateX(0);
+  }
 
 
 
 
 }
 
+/* [data-aos="pl-anim-fadeL"] {
+  transition-property: transform, opacity;
+}
+[data-aos="pl-anim-fadeL"].aos-animate{
+  opacity: 0;
+  transform: translateX(-200px);
+} */
+
+/* [data-aos="arrowDownFade"] {
+  opacity: 1;
+  visibility: visible;
+  transition-property: visibility, opacity;
+}
+[data-aos="arrowDownFade"].aos-animate {
+      opacity: 0;
+      visibility: hidden;
+  }
+} */
 
 
 
