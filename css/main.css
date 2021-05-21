@@ -219,10 +219,11 @@ html {
     height: 80px;
     width: 50px;
     border-radius: 50px 50px 0 0;
-    transition: opacity 0.5s;
     bottom: 0;
     right: 50%;
     z-index: 15;
+    transition: all 0.3s ease-out !important;
+    box-shadow: 2px -4px 8px #800080;
   }
 
   .pl-arrow-shaft {
@@ -232,6 +233,7 @@ html {
     bottom: -30%;
     margin: auto;
     background-color: black;
+    transition: all 0.3s ease-out;
   }
 
   .pl-arrow-point {
@@ -243,7 +245,29 @@ html {
     margin: auto;
     position: relative;
     bottom: -30%;
+    transition: all 0.3s ease-out;
   }
+
+  .pl-arrowdown-box:hover{
+    background-color: #800080;
+    box-shadow: 2px -4px 8px #663399;
+  }
+
+  .pl-arrowdown-box:hover .pl-arrow-shaft{
+    background-color: #FFF;
+    width: 3px;
+  }
+
+  .pl-arrowdown-box:hover .pl-arrow-point{
+    border-top: 9px solid #FFF;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+  }
+
+  /* .pl-arrow-shaft:hover{
+    background-color: #FFF;
+  } */
+
 
 
 /* FADE ON ARROW DOWN ON SCROLL USING AOS ANIM */
