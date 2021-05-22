@@ -306,23 +306,24 @@ html {
     background-position-y: -45px;
   }
 
-  @keyframes box-grow {
-    to{
-      height: 165px;
-    }
-  }
 
   .pl-info-box{
     display: none;
     width: 215px;
     height: 150px;
-    padding: 25px;
+    padding: 20px 25px 25px 25px;
     position: fixed;
     bottom: 115px;
     right: 65px;
     z-index: 10;
     border-radius: 5px;
-    animation: box-grow 0.2s forwards;
+    animation: box-grow 0.5s forwards;
+  }
+
+  @keyframes box-grow {
+    to{
+      height: 177px;
+    }
   }
 
   .pl-contact-arrowcorner{
@@ -334,11 +335,24 @@ html {
     position: fixed;
     bottom: 98px;
     right: 65px;
-    z-index: 10;
+    z-index: 9;
+  }
+
+  .pl-social-links{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .pl-social-links a{
-    margin-right: 32px;
+    display: inline-block;
+    height: 38px;
+    line-height: 34px;
+    width: 38px;
+    border-radius: 50%;
+    background-color: black;
+    margin-top: 5px;
+    text-align: center;
   }
 
   .pl-info-box p{
