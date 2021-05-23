@@ -18,7 +18,7 @@ var infoBox = document.querySelector(".pl-info-box");
 var arrowCorner = document.querySelector(".pl-contact-arrowcorner");
 
 btnContact.addEventListener("click", function(){
-    btnContact.classList.toggle('pl-btn-contact-Y');
-    infoBox.classList.toggle('pl-toggleDisplayBlock');
-    arrowCorner.classList.toggle('pl-toggleDisplayBlock');
+  btnContact.classList.toggle('pl-btn-contact-Y');
+  infoBox.classList.toggle('pl-toggleDisplayBlock');
+  arrowCorner.classList.toggle('pl-toggleDisplayBlock');
 });
