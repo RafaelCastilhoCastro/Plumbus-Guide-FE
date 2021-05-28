@@ -577,17 +577,53 @@ html {
     font-family: "Open Sans", sans-serif;
   }
 
-
   .pl-featImg{
-    width: 70%;
-    opacity: 0.6;
+    width: 60%;
+    opacity: 0.7;
   }
 
   .pl-featImgAdjSize{
-    width: 60%;
+    width: 50%;
   }
 
+  .pl-feat-spacer{
+    position: relative;
+    padding-right: 50px;
+    padding-left: 50px;
+  }
 
+  .pl-feat-spacer-odd:before,
+    .pl-feat-spacer-odd:after {
+    content: '';
+    background: rebeccapurple;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+  }
+
+  .pl-feat-spacer-even:before,
+    .pl-feat-spacer-even:after {
+    content: '';
+    background: rebeccapurple;
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 100%;
+  }
+
+  .pl-feat-spacer-odd:before,
+    .pl-feat-spacer-even:before{
+    width: 50px;
+    height: 1px;
+  }
+
+  .pl-feat-spacer-odd:after,
+    .pl-feat-spacer-even:after{
+    width: 1px;
+    height: 100%;
+    transform: translateY(-50%);
+  }
 
   .pl-feat-title{
     position: absolute;
