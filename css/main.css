@@ -96,6 +96,7 @@ html {
   .pl-base-page {
     width: calc(100% - 60px);
     height: calc(100vh - 60px);
+    max-height: calc(100vh - 60px);
     display: table;
     border: 1px solid #800080;
     margin: 30px;
@@ -106,6 +107,19 @@ html {
     position: relative;
   }
 
+  .pl-lateral-wave-window{
+    height: 194%;
+    position: absolute;
+    right: 0;
+    overflow: hidden;
+  }
+
+  .pl-lateral-wave{
+    position: relative;
+    height: 120%;
+    width: 25%;
+    left: 74.2%;
+  }
 
   /* ---------- SECTION 1 ---------- */
 

@@ -22,3 +22,6 @@ btnContact.addEventListener("click", function(){
   infoBox.classList.toggle('pl-toggleDisplayBlock');
   arrowCorner.classList.toggle('pl-toggleDisplayBlock');
 });
+
+
+var rellax = new Rellax('.rellax');
