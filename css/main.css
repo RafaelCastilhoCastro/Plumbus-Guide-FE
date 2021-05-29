@@ -588,8 +588,8 @@ html {
 
   .pl-feat-spacer{
     position: relative;
-    padding-right: 50px;
-    padding-left: 50px;
+    padding-right: 30px;
+    padding-left: 30px;
   }
 
   .pl-feat-spacer-odd:before,
@@ -600,6 +600,7 @@ html {
     position: absolute;
     top: 50%;
     left: 100%;
+    z-index: 100;
   }
 
   .pl-feat-spacer-even:before,
@@ -610,11 +611,12 @@ html {
     position: absolute;
     top: 50%;
     right: 100%;
+    z-index: 100;
   }
 
   .pl-feat-spacer-odd:before,
     .pl-feat-spacer-even:before{
-    width: 50px;
+    width: 150px;
     height: 1px;
   }
 
