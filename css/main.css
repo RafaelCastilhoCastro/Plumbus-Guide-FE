@@ -96,10 +96,10 @@ html {
   .pl-base-page {
     width: calc(100% - 60px);
     height: calc(100vh - 60px);
-    max-height: calc(100vh - 60px);
     display: table;
     border: 1px solid #800080;
     margin: 30px;
+    overflow: hidden;
   }
 
   .pl-sect {
@@ -107,18 +107,33 @@ html {
     position: relative;
   }
 
-  .pl-lateral-wave-window{
+  .pl-index-wave-window{
     height: 194%;
     position: absolute;
     right: 0;
     overflow: hidden;
   }
 
-  .pl-lateral-wave{
+  .pl-index-wave{
     position: relative;
     height: 120%;
     width: 25%;
     left: 74.2%;
+  }
+
+  .pl-feat-wave-window{
+    height: 312.5%;
+    position: absolute;
+    right: 1%;
+    overflow: hidden;
+  }
+
+  .pl-feat-wave{
+    position: relative;
+    width: 25%;
+    left: 73.9%;
+    height: 129.4%;
+    bottom: 1%;
   }
 
   /* ---------- SECTION 1 ---------- */
@@ -149,7 +164,7 @@ html {
   .pl-overlay{
     width: 110%;
     height: 110vh;
-    background-color: rgba(128, 0, 128, 0.8);
+    background-color: #800080;
     position: fixed;
     top: -1em;
     left: -0.5em;
@@ -614,7 +629,7 @@ html {
     position: absolute;
     top: 50%;
     left: 100%;
-    z-index: 100;
+    z-index: 10;
   }
 
   .pl-feat-spacer-even:before,

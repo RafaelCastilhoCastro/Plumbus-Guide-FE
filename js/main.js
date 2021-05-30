@@ -23,5 +23,4 @@ btnContact.addEventListener("click", function(){
   arrowCorner.classList.toggle('pl-toggleDisplayBlock');
 });
 
-
 var rellax = new Rellax('.rellax');
