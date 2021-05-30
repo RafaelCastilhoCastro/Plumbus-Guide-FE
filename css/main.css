@@ -107,34 +107,20 @@ html {
     position: relative;
   }
 
-  .pl-index-wave-window{
+  .pl-wave-window-index{
     height: 194%;
     position: absolute;
-    right: 0;
     overflow: hidden;
+    right: 1.6%;
   }
 
-  .pl-index-wave{
+  .pl-wave-index{
     position: relative;
     height: 120%;
     width: 25%;
-    left: 74.2%;
+    left: 80%;
   }
 
-  .pl-feat-wave-window{
-    height: 312.5%;
-    position: absolute;
-    right: 1%;
-    overflow: hidden;
-  }
-
-  .pl-feat-wave{
-    position: relative;
-    width: 25%;
-    left: 73.9%;
-    height: 129.4%;
-    bottom: 1%;
-  }
 
   /* ---------- SECTION 1 ---------- */
 
@@ -678,7 +664,23 @@ html {
     -moz-user-select: none;
   }
 
-  /* FEATURES PG ITEMS EFFECTS */
+  .pl-wave-window-feat{
+    height: 312.5%;
+    position: absolute;
+    overflow: hidden;
+    right: 1.6%;
+  }
+
+  .pl-wave-feat{
+    position: relative;
+    height: 129.4%;
+    width: 25%;
+    left: 78%;
+    bottom: 1%;
+  }
+
+
+  /* FEATURES PG ITEMS SLIDE EFFECTS */
   [data-aos="pl-init-anim-fadeR"] {
     transition-property: transform, opacity;
   }
@@ -706,8 +708,6 @@ html {
     opacity: 1;
     transform: translateX(0);
   }
-
-
 
 
 }

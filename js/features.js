@@ -8,4 +8,5 @@ anime({
   easing: 'cubicBezier(0.0.210, 1.115, 0.360, 1.020)'
 });
 
+// RELLAX PARALLAX ACTIVATION
 var rellax = new Rellax('.rellax');

@@ -23,4 +23,5 @@ btnContact.addEventListener("click", function(){
   arrowCorner.classList.toggle('pl-toggleDisplayBlock');
 });
 
+// RELLAX PARALLAX ACTIVATION
 var rellax = new Rellax('.rellax');
