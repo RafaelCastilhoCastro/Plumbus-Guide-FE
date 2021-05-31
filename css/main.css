@@ -108,10 +108,10 @@ html {
   }
 
   .pl-wave-window-index{
-    height: 194%;
+    height: 194.6%;
     position: absolute;
     overflow: hidden;
-    right: 1.6%;
+    right: 1.5%;
   }
 
   .pl-wave-index{
@@ -665,10 +665,10 @@ html {
   }
 
   .pl-wave-window-feat{
-    height: 312.5%;
+    height: 311%;
     position: absolute;
     overflow: hidden;
-    right: 1.6%;
+    right: 1.5%;
   }
 
   .pl-wave-feat{

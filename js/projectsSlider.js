@@ -40,7 +40,6 @@ function sliderNextItem(){
   sliderPos -= sliderItemWidth;
   var sliderPosStr = sliderPos.toString();
   sliderList.style.transform = "translateX(" + sliderPosStr + "px)";
-
 }
 
 // SLIDER PREVIOUS ITEM ANIMATION
