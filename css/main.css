@@ -55,7 +55,94 @@ html {
 
   .pl-topmenu{
     display: none;
-    z-index: 10;
+  }
+
+  .pl-overlay-menu-mobile{
+    display: none;
+    position: absolute;
+    width: 110%;
+    height: 110vh;
+    background-color: #800080;
+    position: fixed;
+    top: -1em;
+    left: -0.5em;
+    z-index: 13;
+    /* opacity: 0.95; */
+  }
+
+  .pl-overlay
+
+  .pl-topmenu-mobile{
+    height: 100vh;
+    width: 400px;
+    position: fixed;
+    border-radius: 20px 0 0 20px;
+    background-color: black;
+    top: 0;
+    right: -400px;
+    padding-top: 60px;
+    z-index: 16;
+  }
+
+
+  .pl-menu-mob-in {
+    animation: menuMobIn 0.5s ease-in-out forwards;
+  }
+
+  @keyframes menuMobIn {
+    to{
+      right: 0;
+    }
+  }
+
+
+  .pl-menu-mob-out {
+    animation: menuMobOut 0.5s ease-in-out forwards;
+  }
+
+  @keyframes menuMobOut {
+    from{
+      right: 0;
+    }
+    to{
+      right: -400px;
+    }
+  }
+
+
+  .pl-menu-mob-no-anim{
+    animation: none;
+  }
+
+  .pl-btn-menu-mobile{
+    position: fixed;
+    width: 45px;
+    height: 45px;
+    display: block;
+    border-radius: 50%;
+    border: none;
+    right: 35px;
+    top: 50px;
+    line-height: 13px;
+  }
+
+  .pl-topmenu-mobile ul{
+    list-style: none;
+  }
+
+  .pl-topmenu-mobile ul li{
+    margin-top: 30px;
+  }
+
+  .pl-topmenu-mobile ul a{
+    text-decoration: none;
+    font-size: 45px;
+    font-family: "Proza Libre";
+  }
+
+  .pl-topmenu-mobile a:hover {
+    color: #663399;
+    text-shadow: 1px 1px 1px #663399;
   }
 
 
@@ -234,7 +321,7 @@ html {
     border-radius: 50px 50px 0 0;
     bottom: 0;
     right: 50%;
-    z-index: 15;
+    z-index: 9;
     transition: all 0.3s ease-out !important;
     box-shadow: 2px -4px 8px #800080;
   }
@@ -310,7 +397,7 @@ html {
     right: 45px;
     border: none;
     border-radius: 50%;
-    z-index: 10;
+    z-index: 9;
     transition: all 0.3s ease-out;
     cursor: pointer;
   }
@@ -723,6 +810,14 @@ html {
 }
 
 @media screen and (min-width: 992px){
+
+  .pl-overlay-menu-mobile{
+    display: none;
+  }
+
+  .pl-topmenu-mobile{
+    display: none;
+  }
 
   .pl-topmenu {
     display: table;

@@ -1,5 +1,4 @@
-// ------- DISPLAY TOGGLE ON OVERLAY AND CONTACT MODAL -------
-
+// DISPLAY TOGGLE ON OVERLAY AND CONTACT MODAL
 var toggleModal = document.querySelectorAll('.pl-toggle-modal');
 
 for (let i = 0; i < toggleModal.length; i++) {
@@ -12,7 +11,7 @@ for (let i = 0; i < toggleModal.length; i++) {
 )};
 
 
-// ------- SLIDE EFFECT ON CONTACT BTN & INFO BOX -------
+//  SLIDE EFFECT ON CONTACT BTN & INFO BOX
 var btnContact = document.querySelector(".pl-btn-contact");
 var infoBox = document.querySelector(".pl-info-box");
 var arrowCorner = document.querySelector(".pl-contact-arrowcorner");
@@ -23,5 +22,28 @@ btnContact.addEventListener("click", function(){
   arrowCorner.classList.toggle('pl-toggleDisplayBlock');
 });
 
+
 // RELLAX PARALLAX ACTIVATION
 var rellax = new Rellax('.rellax');
+
+
+// SLIDE EFFECT ON MENU MOBILE
+var btnMenuMobile = document.querySelector('.pl-btn-menu-mobile');
+var btnMenuMobileIcon = document.querySelector('.pl-btn-menu-mobile ion-icon')
+var menuMobile = document.querySelector('.pl-topmenu-mobile');
+var menuMobileOverlay = document.querySelector('.pl-overlay-menu-mobile');
+
+btnMenuMobile.addEventListener("click", function(){
+  menuMobile.classList.remove("pl-menu-mob-no-anim");
+  menuMobile.classList.toggle("pl-menu-mob-in");
+  menuMobile.classList.toggle("pl-menu-mob-out");
+  if (btnMenuMobileIcon.getAttribute('name') === 'menu') {
+    setTimeout(function(){
+      btnMenuMobileIcon.setAttribute('name', 'close');
+    }, 200);
+  }else{
+    setTimeout(function(){
+      btnMenuMobileIcon.setAttribute('name', 'menu');
+      }, 200);
+  }
+});
