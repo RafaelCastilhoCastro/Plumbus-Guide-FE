@@ -27,7 +27,7 @@ btnContact.addEventListener("click", function(){
 var rellax = new Rellax('.rellax');
 
 
-// SLIDE EFFECT ON MENU MOBILE
+// MOBILE MENU BTN, SLIDE EFFECT & OVERLAY FADE
 var btnMenuMobile = document.querySelector('.pl-btn-menu-mobile');
 var btnMenuMobileIcon = document.querySelector('.pl-btn-menu-mobile ion-icon')
 var menuMobile = document.querySelector('.pl-topmenu-mobile');
@@ -37,6 +37,19 @@ btnMenuMobile.addEventListener("click", function(){
   menuMobile.classList.remove("pl-menu-mob-no-anim");
   menuMobile.classList.toggle("pl-menu-mob-in");
   menuMobile.classList.toggle("pl-menu-mob-out");
+
+  if (menuMobileOverlay.classList.contains('pl-vanish')){
+    menuMobileOverlay.classList.toggle('pl-toggleDisplayBlock');
+    setTimeout(function(){
+      menuMobileOverlay.classList.remove('pl-vanish');
+    }, 10);
+  }else{
+    menuMobileOverlay.classList.add('pl-vanish');
+    setTimeout(function(){
+      menuMobileOverlay.classList.toggle('pl-toggleDisplayBlock');
+    }, 500);
+  }
+
   if (btnMenuMobileIcon.getAttribute('name') === 'menu') {
     setTimeout(function(){
       btnMenuMobileIcon.setAttribute('name', 'close');
