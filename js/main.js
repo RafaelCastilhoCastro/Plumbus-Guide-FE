@@ -1,14 +1,29 @@
-// DISPLAY TOGGLE ON OVERLAY AND CONTACT MODAL
+// OVERLAY & CONTACT MODAL
 var toggleContactModal = document.querySelectorAll('.pl-toggle-contact-modal');
-
 for (let i = 0; i < toggleContactModal.length; i++) {
   toggleContactModal[i].addEventListener("click", function(){
-    var contactOverlay = document.querySelector('.pl-contact-overlay');
+
+    // CONTACT MODAL SLIDE IN & OUT
     var contactModal = document.querySelector('.pl-contact-modal');
-    contactOverlay.classList.toggle('pl-toggleDisplayBlock');
-    contactModal.classList.toggle('pl-Anim-Slide-Top');
-  }
-)};
+    contactModal.classList.remove('pl-contact-modal-no-anim');
+    contactModal.classList.toggle('pl-contact-modal-out');
+    contactModal.classList.toggle('pl-contact-modal-in');
+
+    // OVERLAY APPEAR & FADE
+    var contactOverlay = document.querySelector('.pl-contact-overlay');
+    if (contactOverlay.classList.contains('pl-vanish')){
+      contactOverlay.classList.toggle('pl-toggleDisplayBlock');
+      setTimeout(function(){
+        contactOverlay.classList.remove('pl-vanish');
+      }, 10);
+    }else{
+      contactOverlay.classList.add('pl-vanish');
+      setTimeout(function(){
+        contactOverlay.classList.toggle('pl-toggleDisplayBlock');
+      }, 500);
+    }
+  });
+}
 
 
 //  SLIDE EFFECT ON CONTACT BTN & INFO BOX
@@ -34,12 +49,14 @@ var menuMobile = document.querySelector('.pl-topmenu-mobile');
 var menuMobileOverlay = document.querySelector('.pl-overlay-menu-mobile');
 var toggleMobileMenu = document.querySelectorAll('.pl-toggle-mobile-menu');
 
+// MOBILE MENU SLIDE
 for (let i = 0; i < toggleMobileMenu.length; i++) {
   toggleMobileMenu[i].addEventListener("click", function(){
     menuMobile.classList.remove("pl-menu-mob-no-anim");
     menuMobile.classList.toggle("pl-menu-mob-in");
     menuMobile.classList.toggle("pl-menu-mob-out");
 
+    // OVERLAY APPEAR & FADE
     if (menuMobileOverlay.classList.contains('pl-vanish')){
       menuMobileOverlay.classList.toggle('pl-toggleDisplayBlock');
       setTimeout(function(){
@@ -52,6 +69,7 @@ for (let i = 0; i < toggleMobileMenu.length; i++) {
       }, 500);
     }
 
+    // MOBILE MENU BTN CHANGE
     if (btnMenuMobileIcon.getAttribute('name') === 'menu') {
       setTimeout(function(){
         btnMenuMobileIcon.setAttribute('name', 'close');

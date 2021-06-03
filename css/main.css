@@ -227,14 +227,15 @@ html {
 
   /* ---------  CONTACT OVERLAY  --------- */
   .pl-contact-overlay{
+    display: none;
     width: 110%;
     height: 110vh;
-    background-color: #800080;
-    position: fixed;
     top: -1em;
     left: -0.5em;
+    background-color: #800080;
+    position: fixed;
     z-index: 20;
-    display: none;
+    transition: opacity 0.5s;
   }
 
 
@@ -254,15 +255,32 @@ html {
     visibility: hidden;
   }
 
-  .pl-Anim-Slide-Top{
-    animation: slideFromTop 0.5s forwards cubic-bezier(.24,1.69,.75,.76);
+  .pl-contact-modal-in{
+    animation: contactModalIn 0.5s forwards cubic-bezier(.24,1.69,.75,.76);
   }
-
-  @keyframes slideFromTop {
+  @keyframes contactModalIn {
     to {
       top: 30%;
       visibility: visible;
     }
+  }
+
+  .pl-contact-modal-out{
+    animation: contactModalOut 0.5s forwards;
+  }
+  @keyframes contactModalOut {
+  from{
+    top: 30%;
+    visibility: visible;
+  }
+  to{
+    top: -100%;
+    visibility: hidden;
+  }
+}
+
+  .pl-contact-modal-no-anim{
+    animation: none;
   }
 
   .pl-modal-header p{
