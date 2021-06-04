@@ -30,12 +30,36 @@ for (let i = 0; i < toggleContactModal.length; i++) {
 var btnContact = document.querySelector(".pl-btn-contact");
 var infoBox = document.querySelector(".pl-info-box");
 var arrowCorner = document.querySelector(".pl-contact-arrowcorner");
+var infoBoxContent = document.querySelectorAll(".pl-infobox-content");
 
 btnContact.addEventListener("click", function(){
   btnContact.classList.toggle('pl-btn-contact-Y');
-  infoBox.classList.toggle('pl-toggleDisplayBlock');
-  arrowCorner.classList.toggle('pl-toggleDisplayBlock');
+
+  infoBox.classList.remove('pl-info-box-no-anim');
+  infoBox.classList.toggle('pl-info-box-grow');
+  infoBox.classList.toggle('pl-info-box-shrink');
+
+  arrowCorner.classList.remove('pl-contact-arrowcorner-no-anim');
+  arrowCorner.classList.toggle('pl-contact-arrowcorner-in');
+  arrowCorner.classList.toggle('pl-contact-arrowcorner-out');
+
+  setTimeout(function(){
+    for (var i = 0; i < infoBoxContent.length; i++) {
+      if (infoBoxContent[i].classList.contains('pl-vanish')) {
+        infoBoxContent[i].classList.toggle('pl-toggleDisplayBlock');
+        setTimeout(function(){
+          infoBoxContent[i].classList.remove('pl-vanish');
+        }, 10);
+      }else{
+        infoBoxContent[i].classList.add('pl-vanish');
+        setTimeout(function(){
+          infoBoxContent[i].classList.toggle('pl-toggleDisplayBlock');
+        }, 500);
+      }
+    }
+  }, 400);
 });
+
 
 
 // RELLAX PARALLAX ACTIVATION
@@ -44,7 +68,7 @@ var rellax = new Rellax('.rellax');
 
 // MOBILE MENU BTN, SLIDE EFFECT & OVERLAY FADE
 var btnMenuMobile = document.querySelector('.pl-btn-menu-mobile');
-var btnMenuMobileIcon = document.querySelector('.pl-btn-menu-mobile ion-icon')
+var btnMenuMobileIcon = document.querySelector('.pl-btn-menu-mobile ion-icon');
 var menuMobile = document.querySelector('.pl-topmenu-mobile');
 var menuMobileOverlay = document.querySelector('.pl-overlay-menu-mobile');
 var toggleMobileMenu = document.querySelectorAll('.pl-toggle-mobile-menu');

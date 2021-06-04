@@ -418,34 +418,83 @@ html {
 
 
   .pl-info-box{
-    display: none;
-    width: 235px;
-    height: 150px;
-    padding: 20px 25px 25px 25px;
+    display: block;
+    height: 0;
+    width: 0;
     position: fixed;
     bottom: 115px;
     right: 65px;
     z-index: 10;
     border-radius: 5px;
-    animation: box-grow 0.5s forwards;
   }
 
-  @keyframes box-grow {
+  .pl-info-box-grow{
+    animation: infoBoxGrow 0.5s forwards;
+  }
+  @keyframes infoBoxGrow {
     to{
       height: 185px;
+      width: 235px;
+      padding: 20px 25px 25px 25px;
     }
   }
+
+  .pl-info-box-shrink{
+    animation: infoBoxShrink 0.4s forwards;
+  }
+  @keyframes infoBoxShrink {
+    from{
+      height: 185px;
+      width: 235px;
+      padding: 20px 25px 25px 25px;
+    }
+    to{
+      height: 0;
+      width: 0;
+      padding: 0;
+    }
+  }
+
+  .pl-info-box-no-anim{
+    animation: none;
+  }
+
 
   .pl-contact-arrowcorner{
     height: 0;
     width: 0;
     border-top: 20px solid #1C1C1C;
-    border-left: 20px solid transparent;
-    display: none;
+    border-left: 0px solid transparent;
+    display: block;
     position: fixed;
     bottom: 98px;
     right: 65px;
     z-index: 9;
+  }
+
+  .pl-contact-arrowcorner-in{
+    animation: contactArrowIn 0.5s forwards;
+  }
+  @keyframes contactArrowIn {
+    to{
+      border-left: 20px solid transparent;
+    }
+  }
+
+  .pl-contact-arrowcorner-out{
+    animation: contactArrowOut 0.5s forwards;
+  }
+  @keyframes contactArrowOut {
+    0%{
+      border-left: 20px solid transparent;
+    }
+    100%{
+      border-left: 0px solid transparent;
+    }
+  }
+
+  .pl-contact-arrowcorner-no-anim{
+    animation: none;
   }
 
   .pl-social-links{
@@ -479,6 +528,10 @@ html {
    #logo-dribbble-frame:hover #logo-dribbble,
      #logo-instagram-frame:hover #logo-instagram {
     color: #663399;
+  }
+
+  .pl-infobox-content{
+    display: none;
   }
 
 
