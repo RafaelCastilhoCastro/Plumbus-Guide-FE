@@ -531,7 +531,9 @@ html {
   }
 
   .pl-infobox-content{
-    display: none;
+    /* display: block; */
+    visibility: hidden;
+    transition: all 0.3s;
   }
 
 
@@ -971,6 +973,14 @@ ion-icon{
 
 .pl-toggleDisplayNone{
   display: none;
+}
+
+.pl-toggleVisible{
+  visibility: visible;
+}
+
+.pl-toggleHidden{
+  visibility: hidden;
 }
 
 .pl-appear{

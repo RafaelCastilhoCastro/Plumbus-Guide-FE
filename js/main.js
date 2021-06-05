@@ -30,36 +30,51 @@ for (let i = 0; i < toggleContactModal.length; i++) {
 var btnContact = document.querySelector(".pl-btn-contact");
 var infoBox = document.querySelector(".pl-info-box");
 var arrowCorner = document.querySelector(".pl-contact-arrowcorner");
-var infoBoxContent = document.querySelectorAll(".pl-infobox-content");
+var infoboxContent = document.querySelectorAll(".pl-infobox-content");
 
 btnContact.addEventListener("click", function(){
   btnContact.classList.toggle('pl-btn-contact-Y');
 
-  infoBox.classList.remove('pl-info-box-no-anim');
-  infoBox.classList.toggle('pl-info-box-grow');
-  infoBox.classList.toggle('pl-info-box-shrink');
+  if (infoboxContent[0].classList.contains('pl-vanish')) {
+    infoBox.classList.remove('pl-info-box-no-anim');
+    infoBox.classList.toggle('pl-info-box-grow');
+    infoBox.classList.toggle('pl-info-box-shrink');
 
-  arrowCorner.classList.remove('pl-contact-arrowcorner-no-anim');
-  arrowCorner.classList.toggle('pl-contact-arrowcorner-in');
-  arrowCorner.classList.toggle('pl-contact-arrowcorner-out');
+    arrowCorner.classList.remove('pl-contact-arrowcorner-no-anim');
+    arrowCorner.classList.toggle('pl-contact-arrowcorner-in');
+    arrowCorner.classList.toggle('pl-contact-arrowcorner-out');
 
-  setTimeout(function(){
-    for (var i = 0; i < infoBoxContent.length; i++) {
-      if (infoBoxContent[i].classList.contains('pl-vanish')) {
-        infoBoxContent[i].classList.toggle('pl-toggleDisplayBlock');
-        setTimeout(function(){
-          infoBoxContent[i].classList.remove('pl-vanish');
-        }, 10);
-      }else{
-        infoBoxContent[i].classList.add('pl-vanish');
-        setTimeout(function(){
-          infoBoxContent[i].classList.toggle('pl-toggleDisplayBlock');
-        }, 500);
-      }
-    }
-  }, 400);
+    setTimeout(function(){
+      for (let i = 0; i < infoboxContent.length; i++) {
+        if (infoboxContent[i].classList.contains('pl-vanish')) {
+          // infoboxContent[i].classList.toggle('pl-toggleDisplayBlock');
+          infoboxContent[i].classList.toggle('pl-toggleVisible');
+          setTimeout(function(){
+            infoboxContent[i].classList.remove('pl-vanish');
+          }, 10);
+        };
+      };
+    }, 400);
+  }else{
+    for (let i = 0; i < infoboxContent.length; i++) {
+      infoboxContent[i].classList.add('pl-vanish');
+    };
+    setTimeout(function(){
+      infoBox.classList.toggle('pl-info-box-grow');
+      infoBox.classList.toggle('pl-info-box-shrink');
+
+      arrowCorner.classList.toggle('pl-contact-arrowcorner-in');
+      arrowCorner.classList.toggle('pl-contact-arrowcorner-out');
+    }, 300);
+  };
 });
 
+// else{
+//   infoboxContent[i].classList.add('pl-vanish');
+//   setTimeout(function(){
+//     infoboxContent[i].classList.toggle('pl-toggleDisplayBlock');
+//   }, 500);
+// };
 
 
 // RELLAX PARALLAX ACTIVATION
