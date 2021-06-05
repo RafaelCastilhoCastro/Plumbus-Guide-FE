@@ -75,7 +75,6 @@ var rellax = new Rellax('.rellax');
 
 
 // MOBILE MENU BTN, SLIDE EFFECT & OVERLAY FADE
-var btnMenuMobile = document.querySelector('.pl-btn-menu-mobile');
 var btnMenuMobileIcon = document.querySelector('.pl-btn-menu-mobile ion-icon');
 var menuMobile = document.querySelector('.pl-topmenu-mobile');
 var menuMobileOverlay = document.querySelector('.pl-overlay-menu-mobile');
@@ -103,13 +102,21 @@ for (let i = 0; i < toggleMobileMenu.length; i++) {
 
     // MOBILE MENU BTN CHANGE
     if (btnMenuMobileIcon.getAttribute('name') === 'menu') {
+      btnMenuMobileIcon.classList.toggle('pl-vanish');
       setTimeout(function(){
         btnMenuMobileIcon.setAttribute('name', 'close');
       }, 200);
+      setTimeout(function(){
+        btnMenuMobileIcon.classList.toggle('pl-vanish');
+      }, 200);
     }else{
+      btnMenuMobileIcon.classList.toggle('pl-vanish');
       setTimeout(function(){
         btnMenuMobileIcon.setAttribute('name', 'menu');
-        }, 200);
-    }
+      }, 200);
+      setTimeout(function(){
+        btnMenuMobileIcon.classList.toggle('pl-vanish');
+      }, 200);
+    };
   });
-}
+};
