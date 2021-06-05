@@ -531,7 +531,6 @@ html {
   }
 
   .pl-infobox-content{
-    /* display: block; */
     visibility: hidden;
     transition: all 0.3s;
   }

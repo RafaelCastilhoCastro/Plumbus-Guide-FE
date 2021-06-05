@@ -26,7 +26,7 @@ for (let i = 0; i < toggleContactModal.length; i++) {
 }
 
 
-//  SLIDE EFFECT ON CONTACT BTN & INFO BOX
+//  CONTACT BTN & INFO BOX EFFECTS
 var btnContact = document.querySelector(".pl-btn-contact");
 var infoBox = document.querySelector(".pl-info-box");
 var arrowCorner = document.querySelector(".pl-contact-arrowcorner");
@@ -46,18 +46,18 @@ btnContact.addEventListener("click", function(){
 
     setTimeout(function(){
       for (let i = 0; i < infoboxContent.length; i++) {
-        if (infoboxContent[i].classList.contains('pl-vanish')) {
-          // infoboxContent[i].classList.toggle('pl-toggleDisplayBlock');
-          infoboxContent[i].classList.toggle('pl-toggleVisible');
-          setTimeout(function(){
-            infoboxContent[i].classList.remove('pl-vanish');
-          }, 10);
-        };
+        infoboxContent[i].classList.toggle('pl-toggleVisible');
+        setTimeout(function(){
+          infoboxContent[i].classList.remove('pl-vanish');
+        }, 10);
       };
     }, 400);
   }else{
     for (let i = 0; i < infoboxContent.length; i++) {
       infoboxContent[i].classList.add('pl-vanish');
+      setTimeout(function(){
+        infoboxContent[i].classList.toggle('pl-toggleVisible');
+      }, 300);
     };
     setTimeout(function(){
       infoBox.classList.toggle('pl-info-box-grow');
@@ -68,13 +68,6 @@ btnContact.addEventListener("click", function(){
     }, 300);
   };
 });
-
-// else{
-//   infoboxContent[i].classList.add('pl-vanish');
-//   setTimeout(function(){
-//     infoboxContent[i].classList.toggle('pl-toggleDisplayBlock');
-//   }, 500);
-// };
 
 
 // RELLAX PARALLAX ACTIVATION
