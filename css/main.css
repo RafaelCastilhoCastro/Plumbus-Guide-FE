@@ -429,7 +429,7 @@ html {
   }
 
   .pl-info-box-grow{
-    animation: infoBoxGrow 0.5s forwards;
+    animation: infoBoxGrow 0.4s forwards;
   }
   @keyframes infoBoxGrow {
     to{
@@ -440,7 +440,7 @@ html {
   }
 
   .pl-info-box-shrink{
-    animation: infoBoxShrink 0.4s forwards;
+    animation: infoBoxShrink 0.3s forwards;
   }
   @keyframes infoBoxShrink {
     from{
@@ -467,13 +467,13 @@ html {
     border-left: 0px solid transparent;
     display: block;
     position: fixed;
-    bottom: 98px;
+    bottom: 100px;
     right: 65px;
     z-index: 9;
   }
 
   .pl-contact-arrowcorner-in{
-    animation: contactArrowIn 0.5s forwards;
+    animation: contactArrowIn 0.3s forwards;
   }
   @keyframes contactArrowIn {
     to{
@@ -482,7 +482,7 @@ html {
   }
 
   .pl-contact-arrowcorner-out{
-    animation: contactArrowOut 0.5s forwards;
+    animation: contactArrowOut 0.3s forwards;
   }
   @keyframes contactArrowOut {
     0%{

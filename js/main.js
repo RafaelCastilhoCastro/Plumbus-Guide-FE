@@ -51,7 +51,7 @@ btnContact.addEventListener("click", function(){
           infoboxContent[i].classList.remove('pl-vanish');
         }, 10);
       };
-    }, 400);
+    }, 300);
   }else{
     for (let i = 0; i < infoboxContent.length; i++) {
       infoboxContent[i].classList.add('pl-vanish');
@@ -65,7 +65,7 @@ btnContact.addEventListener("click", function(){
 
       arrowCorner.classList.toggle('pl-contact-arrowcorner-in');
       arrowCorner.classList.toggle('pl-contact-arrowcorner-out');
-    }, 300);
+    }, 200);
   };
 });
 
