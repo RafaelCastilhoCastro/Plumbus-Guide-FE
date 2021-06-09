@@ -123,7 +123,7 @@ function scaleImg(){
 // PROJECTS TITLES ANIMATION
 const projTitle = (entries, observer) => {
   entries.forEach(entry => {
-    entry.target.classList.toggle("pl-animLetters", entry.isIntersecting);
+    entry.target.classList.toggle("pl-typingLetters", entry.isIntersecting);
   });
 };
 

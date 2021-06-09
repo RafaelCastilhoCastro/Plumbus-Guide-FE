@@ -19,7 +19,7 @@ html {
 
 @media screen and (min-width: 320px){
 
-    /* PAGE PRE-LOADER */
+  /* PAGE PRE-LOADER */
   .pl-preloader{
     width: 100%;
     height: 110vh;
@@ -70,7 +70,7 @@ html {
 
   .pl-topmenu-mobile{
     height: 100vh;
-    width: 400px;
+    width: 300px;
     position: fixed;
     right: -400px;
     top: 0;
@@ -132,7 +132,7 @@ html {
 
   .pl-topmenu-mobile ul a{
     text-decoration: none;
-    font-size: 45px;
+    font-size: 35px;
     font-family: "Proza Libre";
   }
 
@@ -211,21 +211,26 @@ html {
     height: 100%;
     width: 90%;
     position: absolute;
-    background-size: 30%;
+    background-size: 50%;
     background-image: url("../images/plumbus03b.png");
     background-repeat: no-repeat;
-    background-position: 20% 90%;
+    background-position: 95% 100%;
+    /* background-position: 20% 90%; */
     opacity: 0.7;
     transform: rotateY(180deg);
   }
 
   .intro-text {
     margin-top: 20%;
+    text-align: justify;
+  }
+
+  .intro-text h1{
+    text-align: center;
   }
 
   .pl-btn-getnow {
-    position: fixed;
-    margin: 1px;
+    font-size: 18px !important;
   }
 
 
@@ -246,8 +251,9 @@ html {
 
   /* ---------  CONTACT MODAL  --------- */
   .pl-contact-modal{
-    width: 800px;
-    display: table;
+    width: 95%;
+    /* width: 800px; */
+    /* display: table; */
     position: fixed;
     top: -100%;
     left: 0;
@@ -255,7 +261,7 @@ html {
     z-index: 21;
     margin: auto;
     border-radius: 30px 0 30px 30px;
-    padding: 30px;
+    padding: 80px 10px 25px 10px;
     visibility: hidden;
   }
 
@@ -264,7 +270,7 @@ html {
   }
   @keyframes contactModalIn {
     to {
-      top: 30%;
+      top: 10%;
       visibility: visible;
     }
   }
@@ -274,7 +280,7 @@ html {
   }
   @keyframes contactModalOut {
   from{
-    top: 30%;
+    top: 10%;
     visibility: visible;
   }
   to{
@@ -378,11 +384,6 @@ html {
     border-right: 9px solid transparent;
   }
 
-  /* .pl-arrow-shaft:hover{
-    background-color: #FFF;
-  } */
-
-
 
 /* FADE ON ARROW DOWN ON SCROLL USING AOS ANIM */
   [data-aos="arrowDownFade"] {
@@ -394,7 +395,7 @@ html {
         opacity: 0;
         visibility: hidden;
     }
-  }
+  /* } */
 
 
 
@@ -678,9 +679,10 @@ html {
 
   .pl-projImg-frame{
     position: relative;
-    display: table;
+    max-width: 100%;
+    /* display: table; */
     background-color: #663399;
-    padding-top: 60px;
+    padding-top: 63px;
     padding-bottom: 23px;
     bottom: 12%
   }
@@ -729,6 +731,21 @@ html {
 
   .pl-projTitle {
     visibility: hidden;
+  }
+
+  .pl-typingLetters{
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    letter-spacing: .05em;
+    animation: typingLetters 1.5s steps(20) forwards;
+  }
+
+  @keyframes typingLetters {
+    to {
+      width: 100%;
+      visibility: visible;
+     }
   }
 
   .pl-projSubtitle{
@@ -864,16 +881,35 @@ html {
     transform: translateX(0);
   }
 
-
 }
-
 
 
 @media screen and (min-width: 576px){
 
+  /* MOBILE NAVBAR */
+  .pl-topmenu-mobile{
+    width: 400px;
+  }
+
+  .pl-topmenu-mobile ul a{
+    font-size: 45px;
+  }
+
+  .pl-btn-getnow {
+    font-size: 24px !important;
+  }
+
+  .pl-sect1-bg {
+    background-size: 65%;
+    background-position: 36% 100%;
+  }
+
 }
 
+
 @media screen and (min-width: 768px){
+
+
 
 }
 
@@ -953,9 +989,93 @@ html {
 
 @media screen and (min-width: 1364px){
 
+  .pl-title-big {
+    font-size: 35px !important;
+    font-weight: 800;
+  }
+
+  .pl-projSubtitle{
+    font-size: 20px;
+  }
+
+  .pl-projImg-frame{
+    max-width: 90%;
+    bottom: -2%;
+  }
+
+  .pl-projImg-frame img{
+    max-width: 97%;
+  }
+
+  .pl-projs-website-btn{
+    right: -52% !important;
+  }
+
+  .pl-wave-window-index{
+    right: 2.3%;
+  }
+
+  .pl-wave-index{
+    width: 26%;
+  }
+
+  /* AUXILIARY */
+  /* BUTTONS */
+
+  .pl-btn-md {
+    height: 35px;
+    padding: 0 27px;
+    border-radius: 19px;
+    font-size: 15px !important;
+  }
+
+}
+
+@media screen and (min-width: 1500px){
+
+  .pl-wave-window-index{
+    right: 2.1%;
+  }
+
 }
 
 @media screen and (min-width: 1600px){
+
+  .pl-wave-window-index{
+    right: 2%;
+  }
+
+}
+
+@media screen and (min-width: 1700px){
+
+  .pl-wave-window-index{
+    right: 1.9%;
+  }
+
+}
+
+@media screen and (min-width: 1800px){
+
+  .pl-wave-window-index{
+    right: 1.8%;
+  }
+
+}
+
+@media screen and (min-width: 1900px){
+
+  .pl-wave-window-index{
+    right: 1.7%;
+  }
+
+}
+
+@media screen and (min-width: 2000px){
+
+  .pl-wave-window-index{
+    right: 1.5%;
+  }
 
 }
 
@@ -1027,20 +1147,7 @@ ion-icon{
   }
 }
 
-.pl-animLetters{
-  width: 0;
-  overflow: hidden;
-  white-space: nowrap;
-  letter-spacing: .05em;
-  animation: typing 1.5s steps(20) forwards;
-}
 
-@keyframes typing {
-  to {
-    width: 100%;
-    visibility: visible;
-   }
-}
 
 
 
