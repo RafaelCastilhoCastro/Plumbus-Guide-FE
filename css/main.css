@@ -174,7 +174,7 @@ html {
   }
 
 
-  /* --------- BASE PAGE --------- */
+  /* BASE PAGE */
 
   .pl-base-page {
     width: calc(100% - 60px);
@@ -200,27 +200,27 @@ html {
   .pl-wave-index{
     position: relative;
     height: 120%;
-    width: 25%;
+    width: 75%;
     left: 80%;
   }
 
 
-  /* ---------- SECTION 1 ---------- */
+  /* SECTION 1 */
 
   .pl-sect1-bg {
     height: 100%;
     width: 90%;
     position: absolute;
-    background-size: 50%;
+    background-size: 68%;
     background-image: url("../images/plumbus03b.png");
     background-repeat: no-repeat;
-    background-position: 95% 100%;
+    background-position: 50% 89%;
     opacity: 0.7;
     transform: rotateY(180deg);
   }
 
   .intro-text {
-    margin-top: 20%;
+    margin-top: 25%;
     text-align: justify;
   }
 
@@ -233,7 +233,8 @@ html {
   }
 
 
-  /* ---------  CONTACT OVERLAY  --------- */
+  /* CONTACT OVERLAY */
+
   .pl-contact-overlay{
     display: none;
     width: 110%;
@@ -248,11 +249,10 @@ html {
 
 
 
-  /* ---------  CONTACT MODAL  --------- */
+  /* CONTACT MODAL */
+
   .pl-contact-modal{
     width: 95%;
-    /* width: 800px; */
-    /* display: table; */
     position: fixed;
     top: -100%;
     left: 0;
@@ -278,15 +278,15 @@ html {
     animation: contactModalOut 0.5s forwards;
   }
   @keyframes contactModalOut {
-  from{
-    top: 10%;
-    visibility: visible;
+    from{
+      top: 10%;
+      visibility: visible;
+    }
+    to{
+      top: -100%;
+      visibility: hidden;
+    }
   }
-  to{
-    top: -100%;
-    visibility: hidden;
-  }
-}
 
   .pl-contact-modal-no-anim{
     animation: none;
@@ -329,7 +329,7 @@ html {
   }
 
 
-  /* ----- ARROW DOWN SMOOTH SCROLL ----- */
+  /* ARROW DOWN SMOOTH SCROLL */
   .pl-arrowdown-box {
     display: block;
     visibility: visible;
@@ -394,11 +394,9 @@ html {
         opacity: 0;
         visibility: hidden;
     }
-  /* } */
 
 
-
-/* -------- INFO BOX AND TOGGLE BUTTON --------- */
+/* INFO BOX AND TOGGLE BUTTON */
 
   .pl-btn-contact{
     width: 45px;
@@ -419,7 +417,6 @@ html {
   .pl-btn-contact-Y{
     background-position-y: -45px;
   }
-
 
   .pl-info-box{
     display: block;
@@ -462,7 +459,6 @@ html {
   .pl-info-box-no-anim{
     animation: none;
   }
-
 
   .pl-contact-arrowcorner{
     height: 0;
@@ -540,10 +536,9 @@ html {
   }
 
 
+/* SECTION 2 */
 
-/* ---------- SECTION 2 ---------- */
-
-  /* ----- LEFT NAVBAR ----- */
+  /* LEFT NAVBAR */
   .pl-left-bar{
     display: table;
     width: 145px;
@@ -555,6 +550,7 @@ html {
     width: 100%;
     height: 100px;
     display: block;
+    bottom: 88px;
     margin-bottom: 80px;
     position: relative;
   }
@@ -627,10 +623,12 @@ html {
   .pl-next-prev{
     width: 75%;
     height: 45px;
-    border-radius: 0 25px 25px 0;
     display: flex;
+    position: relative;
+    border-radius: 0 25px 25px 0;
     align-items: center;
     justify-content: center;
+    z-index: 10;
     user-select: none;
     -ms-user-select: none;
     -webkit-user-select: none;
@@ -655,7 +653,7 @@ html {
     transform: rotate(-180deg);
   }
 
-  /* ---------- PROJECTS SLIDER ---------- */
+  /* PROJECTS SLIDER */
   .pl-slider-container {
     height: 100vh;
     display: block;
@@ -679,24 +677,25 @@ html {
 
   .pl-projImg-frame{
     position: relative;
-    max-width: 90%;
+    max-width: 70%;
     background-color: #663399;
-    padding-top: 63px;
+    padding-top: 25px;
     padding-bottom: 23px;
-    bottom: 16%;
+    bottom: -18%;
+    right: -15%;
   }
 
   .pl-projImg{
     position: relative;
-    width: 90%;
-    /* left: -10%; */
+    width: 97%;
+    left: -8%;
   }
 
   .pl-projs-website-btn{
     padding-right: 6%;
     position: relative;
     z-index: 10;
-    right: -40%;
+    right: -29%;
     margin-top: 10px;
     margin-bottom: -12px;
     padding-right: 45px !important;
@@ -708,18 +707,18 @@ html {
     color: #fff !important;
   }
 
-  #proj3-website-btn, #proj4-website-btn{
+  /* #proj3-website-btn, #proj4-website-btn{
     right: -61.8%;
-  }
+  } */
 
-  #proj5-website-btn{
+  /* #proj5-website-btn{
     right: -64.2%;
-  }
+  } */
 
   .pl-access-site-icon{
     position: absolute;
     z-index: 10;
-    bottom: 30%;
+    bottom: 25%;
     right: 12%;
     color: #bcbcbc;
   }
@@ -728,9 +727,14 @@ html {
     color: white !important;
   }
 
+  .pl-title-container{
+    position: relative;
+    bottom: -7px;
+  }
 
   .pl-projTitle {
     visibility: hidden;
+    font-size: 32px !important;
   }
 
   .pl-typingLetters{
@@ -740,7 +744,6 @@ html {
     letter-spacing: .05em;
     animation: typingLetters 1.5s steps(20) forwards;
   }
-
   @keyframes typingLetters {
     to {
       width: 100%;
@@ -748,13 +751,18 @@ html {
      }
   }
 
+  .pl-projTitle3, .pl-projTitle5{
+    font-size: 26px !important;
+  }
+
   .pl-projSubtitle{
     opacity: 0;
     transition: opacity 1s 0.7s;
+    font-size: 17px !important;
   }
 
 
-  /* ------- FEATURES PAGE ------- */
+  /* FEATURES PAGE */
   .pl-feat-items{
     margin-top: 10%;
     display: flex;
