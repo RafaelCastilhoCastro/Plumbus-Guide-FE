@@ -228,10 +228,6 @@ html {
     text-align: center;
   }
 
-  .pl-btn-getnow {
-    font-size: 18px !important;
-  }
-
 
   /* CONTACT OVERLAY */
 
@@ -625,6 +621,7 @@ html {
     height: 45px;
     display: flex;
     position: relative;
+    bottom: 37px;
     border-radius: 0 25px 25px 0;
     align-items: center;
     justify-content: center;
@@ -707,14 +704,6 @@ html {
     color: #fff !important;
   }
 
-  /* #proj3-website-btn, #proj4-website-btn{
-    right: -61.8%;
-  } */
-
-  /* #proj5-website-btn{
-    right: -64.2%;
-  } */
-
   .pl-access-site-icon{
     position: absolute;
     z-index: 10;
@@ -732,9 +721,8 @@ html {
     bottom: -7px;
   }
 
-  .pl-projTitle {
+  .pl-typeAnim{
     visibility: hidden;
-    font-size: 32px !important;
   }
 
   .pl-typingLetters{
@@ -751,14 +739,9 @@ html {
      }
   }
 
-  .pl-projTitle3, .pl-projTitle5{
-    font-size: 26px !important;
-  }
-
-  .pl-projSubtitle{
+  .pl-subtitle-anim{
     opacity: 0;
     transition: opacity 1s 0.7s;
-    font-size: 17px !important;
   }
 
 
@@ -890,6 +873,28 @@ html {
   }
 
   /* AUXILIARY CLASES 320px */
+
+  /* TEXTS */
+
+  .pl-title{
+    font-size: 26px;
+    font-weight: 800;
+  }
+
+  .pl-title-L {
+    font-size: 32px;
+    font-weight: 800;
+  }
+
+  .pl-title-XL{
+    font-size: 42px;
+    font-weight: 800;
+  }
+
+  .pl-subtitle {
+    font-size: 17px;
+  }
+
   /* BUTTONS */
 
   .pl-btn {
@@ -943,9 +948,71 @@ html {
   }
 
   .pl-sect1-bg {
-    background-size: 65%;
-    background-position: 36% 100%;
+    background-size: 60%;
+    background-position: 30% 90%;
   }
+
+  .pl-wave-window-index{
+    right: 1%;
+  }
+
+  .pl-wave-index{
+    width: 55%;
+    left: 81%;
+  }
+
+  .pl-big-counter-container{
+    left: -5%
+  }
+
+  .pl-title-container{
+    position: relative;
+    left: -25px;
+  }
+
+  .pl-projTitle {
+    visibility: hidden;
+    font-size: 53px !important;
+  }
+
+  .pl-projTitle3, .pl-projTitle5{
+    font-size: 44px !important;
+  }
+
+  .pl-projSubtitle{
+    font-size: 24px;
+  }
+
+   .pl-projImg-frame{
+    max-width: none;
+    width: 140%;
+    padding-top: 48px;
+    right: -20%;
+  }
+
+  .pl-projs-website-btn{
+    right: -44.5%;
+  }
+
+  .pl-access-site-icon{
+    bottom: 18%;
+    right: 10%;
+  }
+
+  .pl-next-prev{
+    bottom: -135px;
+  }
+
+
+  /* AUXILIARY CLASES 576px */
+  /* BUTTONS */
+
+  .pl-btn-md {
+    height: 28px;
+    padding: 0 24px;
+    font-size: 18px;
+  }
+
 
 }
 
@@ -1181,7 +1248,7 @@ html {
 /* LATERAL WAVES */
   .pl-wave-window-index{
     height: 194.7%;
-    right: 1.4%;
+    right: 1.6%;
   }
 
 
@@ -1306,16 +1373,6 @@ p, label{
   font-family: "Open Sans", sans-serif;
   font-size: 20px;
   margin-bottom: 0.5em;
-}
-
-.pl-title{
-  font-size: 24px;
-  font-weight: 800;
-}
-
-.pl-title-big {
-  font-size: 50px;
-  font-weight: 800;
 }
 
 .pl-prim-font{

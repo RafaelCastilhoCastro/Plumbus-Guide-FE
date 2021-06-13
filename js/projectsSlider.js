@@ -1,4 +1,4 @@
-/* ------- PROJECTS SLIDER DYNAMIC WIDTH ------- */
+/* PROJECTS SLIDER DYNAMIC WIDTH */
 
 var sliderContainer = document.querySelector('.pl-slider-container');
 var sliderList = document.querySelector('.pl-slider-list');
@@ -21,7 +21,7 @@ sliderList.style.width = sliderListWidth+'px';
 
 
 
-// ------- PROJECTS SLIDER ANIMATION  -------
+// PROJECTS SLIDER ANIMATION
 
 // VARIABLES
 var prevItem = document.querySelector('.pl-prev-icon');
@@ -55,7 +55,7 @@ function sliderPrevItem(){
 
 
 
-// ---------- PROJECTS COUNTERS ----------
+// PROJECTS COUNTERS
 
 const sliderTotalItems = sliderItem.length;
 var bigCounter = document.querySelector('.pl-big-counter');
@@ -133,7 +133,7 @@ const projTitleOpt = {
 
 const obsProjTitle = new IntersectionObserver(projTitle, projTitleOpt);
 
-const projTitles = document.querySelectorAll('.pl-projTitle');
+const projTitles = document.querySelectorAll('.pl-typeAnim');
 
 for (let i = 0; i < projTitles.length; i++) {
   obsProjTitle.observe(projTitles[i]);
@@ -154,7 +154,7 @@ const projSubtitleOpt = {
 
 const obsProjSubtitle = new IntersectionObserver(projSubtitle, projSubtitleOpt);
 
-const projSubtitles = document.querySelectorAll('.pl-projSubtitle');
+const projSubtitles = document.querySelectorAll('.pl-subtitle-anim');
 
 for (let i = 0; i < projSubtitles.length; i++) {
   obsProjSubtitle.observe(projSubtitles[i]);
@@ -163,7 +163,7 @@ for (let i = 0; i < projSubtitles.length; i++) {
 
 
 
-// ------- TRIGGERS -------
+// TRIGGERS
 
 nextItem.addEventListener('click', function(){
   sliderNextItem();
