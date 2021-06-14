@@ -198,7 +198,7 @@ html {
     height: 194.6%;
     position: absolute;
     overflow: hidden;
-    right: 1.5%;
+    right: 2%;
   }
 
   .pl-wave-index{
@@ -218,13 +218,13 @@ html {
     background-size: 70%;
     background-image: url("../images/plumbus03b.png");
     background-repeat: no-repeat;
-    background-position: 41% 87%;
+    background-position: 41% 90%;
     opacity: 0.7;
     transform: rotateY(180deg);
   }
 
   .intro-text {
-    margin-top: 25%;
+    margin-top: 40%;
     text-align: justify;
   }
 
@@ -629,7 +629,7 @@ html {
     height: 45px;
     display: flex;
     position: relative;
-    bottom: 37px;
+    bottom: 65px;
     border-radius: 0 25px 25px 0;
     align-items: center;
     justify-content: center;
@@ -682,7 +682,7 @@ html {
 
   .pl-projImg-frame{
     position: relative;
-    max-width: 70%;
+    max-width: 79%;
     background-color: #663399;
     padding-top: 25px;
     padding-bottom: 23px;
@@ -700,10 +700,10 @@ html {
     padding-right: 6%;
     position: relative;
     z-index: 10;
-    right: -29%;
+    right: -28%;
     margin-top: 10px;
     margin-bottom: -12px;
-    padding-right: 45px !important;
+    padding-right: 32px !important;
     color: #bcbcbc;
   }
 
@@ -884,17 +884,17 @@ html {
   /* TEXTS */
 
   .pl-title-M{
-    font-size: 26px;
+    font-size: 21px;
     font-weight: 800;
   }
 
   .pl-title-L {
-    font-size: 32px;
+    font-size: 28px;
     font-weight: 800;
   }
 
   .pl-title-XL{
-    font-size: 42px;
+    font-size: 36px;
     font-weight: 800;
   }
 
@@ -916,16 +916,16 @@ html {
 
   .pl-btn-md {
     height: 28px;
-    padding: 0 24px;
+    padding: 0 15px;
     border-radius: 19px;
-    font-size: 15px;
+    font-size: 13px;
   }
 
   .pl-btn-lg {
     height: 45px;
-    padding: 0 35px;
+    padding: 0 20px;
     border-radius: 25px;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 800;
   }
 
