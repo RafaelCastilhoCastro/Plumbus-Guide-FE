@@ -697,14 +697,11 @@ html {
   }
 
   .pl-projs-website-btn{
-    padding-right: 6%;
-    position: relative;
     z-index: 10;
     right: -28%;
     margin-top: 10px;
     margin-bottom: -12px;
     padding-right: 32px !important;
-    color: #bcbcbc;
   }
 
   .pl-projs-website-btn:hover{
@@ -722,6 +719,7 @@ html {
 
   .pl-website-hover:hover ion-icon{
     color: white !important;
+    transition: color 0.2s;
   }
 
   .pl-title-container{
@@ -977,7 +975,8 @@ html {
   }
 
   .pl-projs-website-btn{
-    right: -44.5%;
+    right: -35%;
+    padding-right: 42px !important;
   }
 
   .pl-access-site-icon{
