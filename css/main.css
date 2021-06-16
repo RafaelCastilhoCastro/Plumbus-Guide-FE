@@ -957,7 +957,6 @@ html {
   }
 
   .pl-title-container{
-    position: relative;
     left: -18px;
   }
 
@@ -1025,6 +1024,19 @@ html {
 
   .pl-wave-window-index{
     right: 0.9%;
+  }
+
+  .pl-title-container{
+    left: -34px;
+  }
+
+  .pl-projImg-frame{
+    bottom: -6%;
+    right: -20%;
+  }
+
+  .pl-projs-website-btn{
+    right: -52.7%;
   }
 
   .pl-next-prev{
@@ -1097,6 +1109,85 @@ html {
     transform: scale(1, 1);
   }
 
+
+  /* SECTION 1 */
+  .intro-text p{
+    margin-top: -35px;
+  }
+
+  .pl-sect1-bg {
+    background-size: 44%;
+  }
+
+
+  /* SECTION 2 */
+  .pl-big-counter-container{
+    bottom: 24px;
+  }
+
+  .pl-nav-line{
+    visibility: visible;
+  }
+
+  .pl-next-prev{
+    bottom: -25px;
+  }
+
+  .pl-title-container{
+    top: -40px;
+  }
+
+  .pl-projImg-frame{
+    bottom: 1%;
+    width: 125%;
+  }
+
+  .pl-projs-website-btn{
+    right: -52.5%;
+  }
+
+  .pl-access-site-icon{
+    bottom: 15%;
+    right: 8%;
+  }
+
+
+  /* LATERAL WAVE */
+  .pl-wave-window-index{
+    right: 0.6%;
+  }
+
+  .pl-wave-index{
+    width: 45%;
+    left: 88%;
+  }
+
+
+  /* AUXILIARY CLASSES 992px */
+
+  /* TEXTS */
+  .pl-title-M{
+    font-size: 58px;
+  }
+
+  .pl-title-L {
+    font-size: 75px;
+  }
+
+  .pl-title-XL{
+    font-size: 65px;
+  }
+
+  .pl-subtitle-size {
+    font-size: 32px;
+  }
+
+
+  /* BUTTONS */
+  .pl-btn-md {
+    height: 32px;
+    font-size: 22px;
+  }
 
 }
 
