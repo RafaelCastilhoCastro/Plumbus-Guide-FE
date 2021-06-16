@@ -146,11 +146,9 @@ html {
   }
 
 
-  /* -------- LOGO'S TWO LAYERS AND ICON -------- */
+  /* LOGO'S TWO LAYERS AND ICON */
   .pl-logo-back {
-    /* height: 100%; */
     height: 110px;
-    /* width: 8%; */
     width: 75px;
     margin-left: 60px;
     border-radius: 48px 5px 5px 5px;
@@ -179,7 +177,6 @@ html {
 
 
   /* BASE PAGE */
-
   .pl-base-page {
     width: calc(100% - 60px);
     height: calc(100vh - 60px);
@@ -194,6 +191,7 @@ html {
     position: relative;
   }
 
+  /* LATERAL WAVE */
   .pl-wave-window-index{
     height: 194.6%;
     position: absolute;
@@ -210,7 +208,6 @@ html {
 
 
   /* SECTION 1 */
-
   .pl-sect1-bg {
     height: 100%;
     width: 90%;
@@ -234,7 +231,6 @@ html {
 
 
   /* CONTACT OVERLAY */
-
   .pl-contact-overlay{
     display: none;
     width: 110%;
@@ -248,9 +244,7 @@ html {
   }
 
 
-
   /* CONTACT MODAL */
-
   .pl-contact-modal{
     width: 95%;
     position: fixed;
@@ -397,7 +391,6 @@ html {
 
 
 /* INFO BOX AND TOGGLE BUTTON */
-
   .pl-btn-contact{
     width: 45px;
     height: 45px;
@@ -600,7 +593,6 @@ html {
     overflow: hidden;
     animation: deactivateLine 0.5s forwards cubic-bezier(.24,1.69,.75,.76);
   }
-
   @keyframes deactivateLine {
     to{
       width: 15%;
@@ -833,6 +825,7 @@ html {
     -moz-user-select: none;
   }
 
+  /* FEAT PG LATERAL WAVE */
   .pl-wave-window-feat{
     height: 311%;
     position: absolute;
@@ -878,9 +871,10 @@ html {
     transform: translateX(0);
   }
 
-  /* AUXILIARY CLASES 320px */
-  /* TEXTS */
 
+  /* AUXILIARY CLASSES 320px */
+
+  /* TEXTS */
   .pl-title-M{
     font-size: 21px;
     font-weight: 800;
@@ -964,18 +958,18 @@ html {
 
   .pl-title-container{
     position: relative;
-    left: -25px;
+    left: -18px;
   }
 
   .pl-projImg-frame{
     max-width: none;
-    width: 140%;
+    width: 150%;
     padding-top: 48px;
-    right: -21%;
+    right: -23%;
   }
 
   .pl-projs-website-btn{
-    right: -35%;
+    right: -38.5%;
     padding-right: 42px !important;
   }
 
@@ -989,22 +983,19 @@ html {
   }
 
 
-  /* AUXILIARY CLASES 576px */
-  /* TEXTS */
+  /* AUXILIARY CLASSES 576px */
 
+  /* TEXTS */
   .pl-title-M{
     font-size: 38px;
-    font-weight: 800;
   }
 
   .pl-title-L {
     font-size: 49px;
-    font-weight: 800;
   }
 
   .pl-title-XL{
     font-size: 65px;
-    font-weight: 800;
   }
 
   .pl-subtitle-size {
@@ -1024,7 +1015,21 @@ html {
 
 @media screen and (min-width: 768px){
 
+  .intro-text{
+    margin-top: 15%;
+  }
 
+  .pl-sect1-bg{
+    background-size: 55%;
+  }
+
+  .pl-wave-window-index{
+    right: 0.9%;
+  }
+
+  .pl-next-prev{
+    bottom: -180px;
+  }
 
 }
 
@@ -1091,9 +1096,6 @@ html {
   .pl-topmenu a:hover:before{
     transform: scale(1, 1);
   }
-
-
-
 
 
 }
