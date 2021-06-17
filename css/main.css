@@ -41,6 +41,8 @@ html {
 
   .pl-preloader p{
     text-align: center;
+    font-size: 30px;
+    font-weight: 800;
   }
 
 
@@ -220,20 +222,20 @@ html {
     transform: rotateY(180deg);
   }
 
-  .intro-text {
+  .pl-intro-text {
     margin-top: 50%;
     text-align: justify;
   }
 
-  .intro-text h1{
+  .pl-intro-text h1{
     text-align: center;
   }
 
-  .intro-text span{
+  .pl-intro-text span{
     line-height: 0;
   }
 
-  .intro-text button {
+  .pl-intro-text button {
     margin-top: 25px;
   }
 
@@ -946,15 +948,15 @@ html {
 
   /* SECTION 1 */
 
-  .intro-text{
+  .pl-intro-text{
     margin-top: 27%;
   }
 
-  .intro-text p{
-    margin-top: 35px;
+  .pl-intro-text p{
+    margin-top: 30px;
   }
 
-  .intro-text button {
+  .pl-intro-text button {
     margin-top: 45px;
   }
 
@@ -1044,7 +1046,7 @@ html {
   /* INDEX PG */
 
   /* SECTION 1 */
-  .intro-text{
+  .pl-intro-text{
     margin-top: 15%;
   }
 
@@ -1175,18 +1177,15 @@ html {
 
 
   /* SECTION 1 */
-  .intro-text p{
-    margin-top: -35px;
-  }
-
   .pl-sect1-bg {
-    background-size: 44%;
+    background-size: 40%;
+    background-position: 41% 88%;
   }
 
 
   /* SECTION 2 */
   .pl-big-counter-container{
-    bottom: 24px;
+    bottom: 79px;
   }
 
   .pl-nav-line{
@@ -1202,7 +1201,7 @@ html {
   }
 
   .pl-projImg-frame{
-    bottom: 1%;
+    bottom: -5%;
     width: 125%;
   }
 
@@ -1246,8 +1245,17 @@ html {
 @media screen and (min-width: 1200px){
 
   /* SECTION 1 */
-  .intro-text p{
-    margin-top: -35px;
+  .pl-sect1-container{
+    position: relative;
+    top: 10%;
+  }
+
+  .pl-intro-text h1{
+    margin-bottom: 11%;
+  }
+
+  .pl-intro-text button{
+    margin-top: 12%;
   }
 
   .pl-sect1-bg{
@@ -1256,6 +1264,25 @@ html {
     background-size: 55%;
   }
 
+  /* SECTION 2 */
+
+  .pl-big-counter-container{
+    bottom: 104px;
+  }
+
+  .pl-slider-container{
+    top: -8%;
+  }
+
+  .pl-projImg-frame{
+    bottom: -3%;
+    width: 108%;
+  }
+
+  .pl-projs-website-btn{
+    right: -50.7%;
+    padding-right: 48px !important;
+  }
 
   /* AUXILIARY CLASSES 1200px */
 
@@ -1274,6 +1301,21 @@ html {
 
   .pl-subtitle-size {
     font-size: 40px;
+  }
+
+  /* BUTTON */
+
+  .pl-btn-md{
+    font-size: 25px;
+    height: 38px;
+  }
+
+  .pl-btn-lg {
+    height: 50px;
+    padding: 0 25px;
+    border-radius: 25px;
+    font-size: 32px;
+    font-weight: 800;
   }
 
 }
@@ -1366,7 +1408,7 @@ html {
 
 
   /* SECTION 1 */
-  .intro-text h1{
+  .pl-intro-text h1{
     text-align: center;
     font-size: 70px !important;
   }
@@ -1394,17 +1436,17 @@ html {
 @media screen and (min-width: 2000px){
 
 /* SECTION 1 */
-  .intro-text h1{
+  .pl-intro-text h1{
     text-align: center;
     font-size: 70px !important;
   }
 
-  .intro-text p{
+  .pl-intro-text p{
     font-size: 20px;
     font-weight: 500;
   }
 
-  .intro-text p span{
+  .pl-intro-text p span{
     font-size: 50px;
     font-style: italic;
   }
