@@ -221,12 +221,16 @@ html {
   }
 
   .intro-text {
-    margin-top: 40%;
+    margin-top: 50%;
     text-align: justify;
   }
 
   .intro-text h1{
     text-align: center;
+  }
+
+  .intro-text button {
+    margin-top: 25px;
   }
 
 
@@ -1171,11 +1175,11 @@ html {
   }
 
   .pl-title-L {
-    font-size: 75px;
+    font-size: 65px;
   }
 
   .pl-title-XL{
-    font-size: 65px;
+    font-size: 75px;
   }
 
   .pl-subtitle-size {
@@ -1192,6 +1196,37 @@ html {
 }
 
 @media screen and (min-width: 1200px){
+
+  /* SECTION 1 */
+  .intro-text p{
+    margin-top: -35px;
+  }
+
+  .pl-sect1-bg{
+    width: 100%;
+    background-position: -3% 55%;
+    background-size: 55%;
+  }
+
+
+  /* AUXILIARY CLASSES 1200px */
+
+  /* TEXTS */
+  .pl-title-M{
+    font-size: 73px;
+  }
+
+  .pl-title-L {
+    font-size: 80px;
+  }
+
+  .pl-title-XL{
+    font-size: 85px;
+  }
+
+  .pl-subtitle-size {
+    font-size: 40px;
+  }
 
 }
 
