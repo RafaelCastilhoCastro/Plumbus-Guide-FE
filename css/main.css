@@ -1198,6 +1198,7 @@ html {
 
   .pl-title-container{
     top: -40px;
+    left: -37px;
   }
 
   .pl-projImg-frame{
@@ -1260,39 +1261,50 @@ html {
 
   .pl-sect1-bg{
     width: 100%;
-    background-position: -3% 55%;
-    background-size: 55%;
+    background-position: 6% 52%;
+    background-size: 45%;
   }
 
   /* SECTION 2 */
 
-  .pl-big-counter-container{
-    bottom: 104px;
+  .pl-title-container{
+    top: 164px;
   }
 
-  .pl-slider-container{
-    top: -8%;
+  .pl-title-container h3{
+    width: 90%;
+  }
+
+  .pl-title-container button{
+    margin-top: 20px;
   }
 
   .pl-projImg-frame{
-    bottom: -3%;
-    width: 108%;
+    bottom: -29%;
+    width: 175%;
+    right: 7%;
+  }
+
+  .pl-big-counter-container{
+    bottom: 0;
   }
 
   .pl-projs-website-btn{
-    right: -50.7%;
-    padding-right: 48px !important;
+    right: -49.4%;
+    padding-right: 40px !important;
   }
+
+
 
   /* AUXILIARY CLASSES 1200px */
 
   /* TEXTS */
   .pl-title-M{
-    font-size: 73px;
+    font-size: 43px;
   }
 
   .pl-title-L {
-    font-size: 80px;
+    font-size: 56px;
   }
 
   .pl-title-XL{
@@ -1300,14 +1312,15 @@ html {
   }
 
   .pl-subtitle-size {
-    font-size: 40px;
+    font-size: 26px;
   }
 
   /* BUTTON */
 
   .pl-btn-md{
-    font-size: 25px;
-    height: 38px;
+    font-size: 20px;
+    height: 30px;
+    padding: 0 17px;
   }
 
   .pl-btn-lg {
@@ -1322,60 +1335,47 @@ html {
 
 @media screen and (min-width: 1364px){
 
-  .pl-title-big {
-    font-size: 35px !important;
-    font-weight: 800;
+  .pl-wave-window-index{
+    right: 0.4%;
   }
 
-  .pl-projSubtitle{
-    font-size: 20px;
+  .pl-big-counter-container{
+    bottom: 38px;
   }
 
-  .pl-projImg-frame{
-    max-width: 90%;
-    bottom: -2%;
+  .pl-title-container{
+    top: -75px;
   }
 
-  .pl-projImg{
-    max-width: 97%;
+  .pl-sect1-bg{
+    background-position: 2% 55%;
+    background-size: 50%;
+  }
+
+  .pl-projImg-frame {
+    bottom: 2%;
   }
 
   .pl-projs-website-btn{
-    right: -52% !important;
-  }
-
-  .pl-wave-window-index{
-    height: 193.8%;
-    right: 2.3%;
-  }
-
-  .pl-wave-index{
-    width: 26%;
-  }
-
-  /* AUXILIARY CLASSES 1364PX */
-  /* BUTTONS */
-
-  .pl-btn-md {
-    height: 35px;
-    padding: 0 27px;
-    border-radius: 19px;
-    font-size: 15px !important;
-  }
-
-  /* TEXTS */
-
-  .pl-title-big {
-    font-size: 70px !important;
-    font-weight: 800;
+    right: -56.3%;
   }
 
 }
 
 @media screen and (min-width: 1500px){
 
-  .pl-wave-window-index{
-    right: 2.1%;
+  .pl-big-counter-container{
+    bottom: 104px;
+  }
+
+  .pl-title-container{
+    top: -110px;
+    left: -40px;
+  }
+
+  .pl-projImg-frame{
+    bottom: 9%;
+    width: 100%;
   }
 
 }
