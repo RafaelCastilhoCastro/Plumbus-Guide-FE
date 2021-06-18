@@ -1339,25 +1339,24 @@ html {
     right: 0.4%;
   }
 
-  .pl-big-counter-container{
-    bottom: 38px;
-  }
-
-  .pl-title-container{
-    top: -75px;
-  }
-
-  .pl-sect1-bg{
-    background-position: 2% 55%;
-    background-size: 50%;
-  }
-
   .pl-projImg-frame {
-    bottom: 2%;
+    bottom: -27%;
   }
 
   .pl-projs-website-btn{
-    right: -56.3%;
+    right: -54.6%;
+  }
+
+
+  /* AUXILIARY CLASSES 1364px */
+
+  /* TEXTS */
+  .pl-title-M{
+    font-size: 47px;
+  }
+
+  .pl-title-L {
+    font-size: 60px;
   }
 
 }
