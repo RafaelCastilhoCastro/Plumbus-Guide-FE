@@ -1182,6 +1182,9 @@ html {
     background-position: 41% 88%;
   }
 
+  .pl-contact-modal{
+    width: 900px;
+  }
 
   /* SECTION 2 */
   .pl-big-counter-container{
